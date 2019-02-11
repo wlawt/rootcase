@@ -4,7 +4,7 @@
 }
 
 .background  {
-    background: url('img/phones.png') no-repeat;
+    background: url('/img/phones.png') no-repeat;
     background-attachment: fixed;
     background-position: right;
     background-size: 50% 70%;
