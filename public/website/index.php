@@ -48,7 +48,7 @@
 
     <!--Nav bar-->
     <nav class="navbar fixed-top navbar-expand-lg navbar-light navbar-inverse">
-        <a class="navbar-brand" href="website/index.php">
+        <a class="navbar-brand" href="index.php">
             <img id="logo" src="img/logo.png">
         </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
@@ -57,16 +57,16 @@
         <div class="collapse navbar-collapse justify-content-end" id="navbarNavDropdown">
           <ul class="navbar-nav">
             <li class="nav-item active">
-              <a class="nav-link" href="website/index.php">Home</a>
+              <a class="nav-link" href="index.php">Home</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="website/feature/feature.html">Features</a>
+              <a class="nav-link" href="feature/feature.html">Features</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="website/store/store.php">Store</a>
+                <a class="nav-link" href="store/store.php">Store</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="website/contact/contact.php">Contact</a>
+              <a class="nav-link" href="contact/contact.php">Contact</a>
             </li> 
           </ul>
        
