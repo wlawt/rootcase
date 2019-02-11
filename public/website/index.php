@@ -48,8 +48,8 @@
 
     <!--Nav bar-->
     <nav class="navbar fixed-top navbar-expand-lg navbar-light navbar-inverse">
-        <a class="navbar-brand" href="index.php">
-            <img id="logo" src="img/logo.png">
+        <a class="navbar-brand" href="/website/index.php">
+            <img id="logo" src="/img/logo.png">
         </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
@@ -57,16 +57,16 @@
         <div class="collapse navbar-collapse justify-content-end" id="navbarNavDropdown">
           <ul class="navbar-nav">
             <li class="nav-item active">
-              <a class="nav-link" href="index.php">Home</a>
+              <a class="nav-link" href="/website/index.php">Home</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="feature/feature.html">Features</a>
+              <a class="nav-link" href="/website/feature/feature.html">Features</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="store/store.php">Store</a>
+                <a class="nav-link" href="/website/store/store.php">Store</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="contact/contact.php">Contact</a>
+              <a class="nav-link" href="/website/contact/contact.php">Contact</a>
             </li> 
           </ul>
        
@@ -87,7 +87,7 @@
             <div class="container">
                 <h2 id="header-spacing" class="display-4">RootCase</h2>
                 <p class="lead">The case that doesn't pollute our space.</p>          
-                <a class="btn btn-primary btn-lg" href="website/feature/feature.html" target="_blank" role="button"><span class="display-5">Get Started</span></a>
+                <a class="btn btn-primary btn-lg" href="/website/feature/feature.html" target="_blank" role="button"><span class="display-5">Get Started</span></a>
             </div>
         </div>
     <hr width="50%" class="hideElement">
@@ -109,7 +109,7 @@
                         </div>
                     </div>
                     <div class="media-right">
-                        <img class="picture" src="img/recycle.png">
+                        <img class="picture" src="/img/recycle.png">
                     </div>
                 </div>
             </div>
@@ -119,7 +119,7 @@
             <div class="card">
                 <div class="media">
                     <div class="media-left">
-                        <img id="leftImg" class="picture" src="img/ecofriendly.png">
+                        <img id="leftImg" class="picture" src="/img/ecofriendly.png">
                     </div>
                     <div class="media-body">
                         <div id="para2" class="text-right">
@@ -151,7 +151,7 @@
                         </div>
                     </div>
                     <div class="media-right">
-                        <img class="picture" src="img/charity.png"> 
+                        <img class="picture" src="/img/charity.png"> 
                     </div>
                 </div>
             </div>
@@ -169,7 +169,7 @@
                     totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae <br>vitae dicta 
                     sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit
                 </p>
-                <a href="website/contact/contact.php">
+                <a href="/website/contact/contact.php">
                     <button class="btn btn-outline-primary my-2 my-sm-0" type="submit" >Contact Us</button>
                 </a>
             </div>
