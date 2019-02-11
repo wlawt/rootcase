@@ -1,4 +1,4 @@
 <?php
     echo "hello world";
-    header('Location: /public/website/index.php');
+    header('Location: website/index.php');
 ?>
