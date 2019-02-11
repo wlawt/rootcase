@@ -7,9 +7,9 @@
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
-    <link rel="stylesheet" href="/wp-content/themes/rootcase/index/style.css">
+    <link rel="stylesheet" href="/website/style.css">
     <link rel="stylesheet" href="contact.css">
-    <link rel="shortcut icon" href="/wp-content/themes/rootcase/Pictures/icon.png" type="image/png">
+    <link rel="shortcut icon" href="/img/icon.png" type="image/png">
 
     <!-- Add icon library -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -19,8 +19,8 @@
   <body>
     <!--Nav bar-->
     <nav class="navbar fixed-top navbar-expand-lg navbar-light navbar-inverse">
-        <a class="navbar-brand" href="/wp-content/themes/rootcase/index/index.php">
-            <img id="logo" src="/wp-content/themes/rootcase/Pictures/logo.png">
+        <a class="navbar-brand" href="/website/index.php">
+            <img id="logo" src="/img/logo.png">
         </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
@@ -28,16 +28,16 @@
         <div class="collapse navbar-collapse justify-content-end" id="navbarNavDropdown">
           <ul class="navbar-nav">
             <li class="nav-item">
-              <a class="nav-link" href="/wp-content/themes/rootcase/index/index.php">Home</a>
+              <a class="nav-link" href="/website/index.php">Home</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="/wp-content/themes/rootcase/index/feature/feature.html">Features</a>
+              <a class="nav-link" href="/website/feature/feature.html">Features</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="/wp-content/themes/rootcase/index/store/store.php">Store</a>
+                <a class="nav-link" href="/website/store/store.php">Store</a>
             </li>
             <li class="nav-item active">
-              <a class="nav-link" href="/wp-content/themes/rootcase/index/contact/contact.php">Contact</a>
+              <a class="nav-link" href="/website/contact/contact.php">Contact</a>
             </li> 
           </ul>
         </div>
@@ -146,6 +146,6 @@
 
     <!--JS-->
     <script src="contact.js"></script>
-    <script src="/wp-content/themes/rootcase/index/index.js"></script>
+    <script src="/website/index.js"></script>
   </body>
 </html>
