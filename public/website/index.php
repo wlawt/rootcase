@@ -63,7 +63,7 @@
               <a class="nav-link" href="/website/feature/feature.html">Features</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="/website/store/store.php">Store</a>
+                <a class="nav-link" href="./views/layouts/main.handlebars">Store</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="/website/contact/contact.php">Contact</a>
