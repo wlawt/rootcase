@@ -209,6 +209,6 @@
 
 
     <!--JS-->
-    <script src="website/index.js"></script>
+    <script src="/website/index.js"></script>
   </body>
 </html>
