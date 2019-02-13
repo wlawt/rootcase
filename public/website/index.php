@@ -66,7 +66,7 @@
               <a class="nav-link" href="/website/feature/feature.html">Features</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="/store">Store</a>
+                <a class="nav-link" href="/">Store</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="/website/contact/contact.php">Contact</a>
