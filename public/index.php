@@ -66,10 +66,10 @@
               <a class="nav-link" href="/website/feature/feature.html">Features</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="/index">Store</a>
+                <a class="nav-link" href="https://root-store.herokuapp.com/">Store</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="/website/contact/contact.php">Contact</a>
+              <a class="nav-link" href="/website/contact/contact.html">Contact</a>
             </li> 
           </ul>
        
