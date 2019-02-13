@@ -1,3 +1,7 @@
+<?php
+    session_start();
+?>
+
 <!doctype html>
 <html lang="en">
   <head>
@@ -66,7 +70,7 @@
               <a class="nav-link" href="/website/feature/feature.html">Features</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="/">Store</a>
+                <p name="store" class="nav-link">Contact</p>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="/website/contact/contact.php">Contact</a>
@@ -159,24 +163,25 @@
                 </div>
             </div>
         </div>
-    </div>
-    <!--Contact-->
-    <hr width="75%">
-    <div id="contact" class="text-center fade-right">
-        <div class="d-flex justify-content-between">
-            <div class="p-1"></div>
-            <div class="p-1">
-                <h1>Got questions?</h1>
-                <p class="paragraph">
-                    Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque <br>laudantium, 
-                    totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae <br>vitae dicta 
-                    sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit
-                </p>
-                <a href="/website/contact/contact.php">
-                    <button class="btn btn-outline-primary my-2 my-sm-0" type="submit" >Contact Us</button>
-                </a>
+
+        <!--Contact-->
+        <hr width="75%">
+        <div id="contact" class="text-center fade-right">
+            <div class="d-flex justify-content-between">
+                <div class="p-1"></div>
+                <div class="p-1">
+                    <h1>Got questions?</h1>
+                    <p class="paragraph">
+                        Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque <br>laudantium, 
+                        totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae <br>vitae dicta 
+                        sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit
+                    </p>
+                    <a href="/website/contact/contact.php">
+                        <button class="btn btn-outline-primary my-2 my-sm-0" type="submit" >Contact Us</button>
+                    </a>
+                </div>
+                <div class="p-1"></div>
             </div>
-            <div class="p-1"></div>
         </div>
     </div>
  
