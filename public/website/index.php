@@ -13,6 +13,9 @@
     <!-- Add icon library -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
+    <script src="~/Scripts/handlebars-v2.0.0.js"></script>
+    
+
     <title>RootCase</title>
   </head>
   <body>
@@ -63,7 +66,7 @@
               <a class="nav-link" href="/website/feature/feature.html">Features</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="/views/layouts/main.handlebars">Store</a>
+                <a class="nav-link" href="/">Store</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="/website/contact/contact.php">Contact</a>
