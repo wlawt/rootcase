@@ -69,6 +69,13 @@
     padding-top: 10px;
 }
 
+#footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+}
+
 #social-media {
     padding-bottom: 20px;
 }

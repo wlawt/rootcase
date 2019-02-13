@@ -23,7 +23,7 @@ app.get('/', (req, res) => {
     res.render('index', {
         stripePublishableKey: keys.stripePublishableKey
     });
-})
+});
 
 // Charge route
 app.post('/charge', (req, res) => {
