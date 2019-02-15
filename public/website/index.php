@@ -51,7 +51,7 @@
 
     <!--Nav bar-->
     <nav class="navbar fixed-top navbar-expand-lg navbar-light navbar-inverse">
-        <a class="navbar-brand" href="/website/index.php">
+        <a class="navbar-brand" href="index.php">
             <img id="logo" src="/img/logo.png">
         </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
@@ -63,34 +63,24 @@
               <a class="nav-link" href="index.php">Home</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="/website/feature/feature.html">Features</a>
+              <a class="nav-link" href="/website/feature.html">Features</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="/">Store</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="/website/contact/contact.html">Contact</a>
+              <a class="nav-link" href="/website/contact.html">Contact</a>
             </li> 
           </ul>
        
         </div>
     </nav>
 
-    <!--Landing page
-    <div class="jumbotron background fade">
-        <div class="text-left jumboText">
-            <h2 id="header-spacing" class="display-4">The case that doesn't pollute our space.</h2>
-            <p class="lead">Thinking how to give back this new year?</p>
-            <p class="my-4">Help the environment with a RootCase!</p>           
-            <a class="btn btn-primary btn-lg" href="/wp-content/themes/rootcase/registration/register.php" target="_blank" role="button"><span class="display-5">Get Started</span></a>
-        </div>
-      </div>
-      -->
         <div class="jumbotron jumbotron-fluid background fade">
             <div class="container">
                 <h2 id="header-spacing" class="display-4">RootCase</h2>
                 <p class="lead">The case that doesn't pollute our space.</p>          
-                <a class="btn btn-primary btn-lg" href="/website/feature/feature.html" target="_blank" role="button"><span class="display-5">Get Started</span></a>
+                <a class="btn btn-primary btn-lg" href="/website/feature.html" target="_blank" role="button"><span class="display-5">Get Started</span></a>
             </div>
         </div>
     <hr width="50%" class="hideElement">
@@ -172,7 +162,7 @@
                         totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae <br>vitae dicta 
                         sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit
                     </p>
-                    <a href="/website/contact/contact.php">
+                    <a href="/website/contact.php">
                         <button class="btn btn-outline-primary my-2 my-sm-0" type="submit" >Contact Us</button>
                     </a>
                 </div>
@@ -213,6 +203,6 @@
 
 
     <!--JS-->
-    <script src="/website/index.js"></script>
+    <script src="/js/index.js"></script>
   </body>
 </html>
