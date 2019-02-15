@@ -66,7 +66,7 @@
               <a class="nav-link" href="/website/feature/feature.html">Features</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="https://root-store.herokuapp.com/">Store</a>
+                <a class="nav-link" href="/">Store</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="/website/contact/contact.html">Contact</a>
