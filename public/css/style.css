@@ -7,19 +7,24 @@
     height: 20%;
 }
 
-.background  {
-    background: url('/img/phones.png') no-repeat;
-    background-attachment: relative;
-    background-position: right;
-    background-size: 50% 70%;
+#header-spacing {
+    margin-top: 100px;
 }
 
 .jumbotron {
     height: 500px;
 }
 
-#header-spacing {
-    margin-top: 100px;
+#landing {
+    width: 50%;
+    height: 50%;
+}
+
+.jumbotron {
+    background-image: url('/img/mountain.jpg');
+    background-size: cover;
+    opacity: 50%;
+    background-size: 100% 100%;
 }
 
 .jumboText {
