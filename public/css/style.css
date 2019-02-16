@@ -27,14 +27,9 @@
     margin-left: 100px;
 }
 
-#info1 {
-    padding-left: 100px;
-    padding-bottom: 50px;
-}
-
-#info2 {
-    padding-right: 100px;
-    padding-bottom: 50px;
+.images {
+    height: 200px;
+    width: 200px;
 }
 
 .paragraph {
