@@ -14,6 +14,9 @@
     <!-- Add icon library -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
+    <!--reCaptcha Script-->
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+
     <title>RootCase - Contact Us</title>
   </head>
   <body>
@@ -88,7 +91,12 @@
             <div class="form-group">
                 <div class="g-recaptcha" data-sitekey="6LfaeI0UAAAAAJuga-XY18yBwGfY2jLSMAKpqvOj"></div>
             </div>
-            <button type="submit" class="btn btn-primary">Submit</button>
+
+            <form action="?" method="POST">
+                <div class="g-recaptcha" data-sitekey="your_site_key"></div>
+                <br/>
+                <input type="submit" class="btn btn-primary" value="Submit">
+            </form>
         </form>
     </div>
     <hr width="50%">
