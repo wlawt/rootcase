@@ -35,24 +35,6 @@ $(document).ready(function() {
   });
 });
 
-// Fade in right contact section
-$(document).ready(function() {
-  $(window).scroll(function() {
-    $('.fade-right').each(function(i) {
-      var bottom_of_object = $(this).offset().top + $(this).outerHeight();
-      var bottom_of_window = $(window).scrollTop() + $(window).height();    
-
-      /* If the object is completely visible in the window, fade it it */
-      if( bottom_of_window > bottom_of_object ){
-          $(this).animate({
-            opacity: 1, 
-            marginLeft: $(this).parent().width() / 2 - $(this).width() / 2
-          },500);       
-      }
-    });
-  });
-});
-
 // Changing 'active' states for tabs --> for navbar
 $(".nav .nav-link").on("click", function(){
   $(".nav").find(".active").removeClass("active");
