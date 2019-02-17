@@ -1,6 +1,6 @@
 const express = require('express');
-//const keys = require('./config/keys');
-//const stripe = require('stripe')(keys.stripeSecretKey);
+const keys = require('./config/keys');
+const stripe = require('stripe')(keys.stripeSecretKey);
 const bodyParser = require('body-parser');
 const path = require('path');
 const nodemailer = require('nodemailer');
@@ -31,6 +31,22 @@ app.use('/features', features);
 app.use('/store', store);
 app.use('/contact', contact);
 
+// Charge route
+app.post('/charge', (req, res) => {
+    const amount = 1999;
+    
+    stripe.customers.create({
+        email: req.body.stripeEmail,
+        source: req.body.stripeToken
+    }).then(customer => stripe.charges.create({
+        amount, 
+        description: 'iPhone 7/8 BioCase',
+        currency: 'cad',
+        customer: customer.id
+    })).then(charge => res.render('success'));
+});
+
+// Contact route
 app.post('/send', (req, res) => {
     const output = `
     <p>You have a new message:</p>

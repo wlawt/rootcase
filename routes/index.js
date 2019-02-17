@@ -5,7 +5,8 @@ const router = express.Router();
 router.get('/', function(req, res) {
     res.render('index', {
         title: 'Rootcase',
-        name: 'Rootcase'
+        name: 'Rootcase',
+        stripePublishableKey: keys.stripePublishableKey
     });
 });
 
