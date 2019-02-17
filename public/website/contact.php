@@ -41,7 +41,7 @@
                 <a class="nav-link" href="/">Store</a>
             </li>
             <li class="nav-item active">
-              <a class="nav-link" href="/website/contact.html">Contact</a>
+              <a class="nav-link" href="/website/contact.php">Contact</a>
             </li> 
           </ul>
         </div>
@@ -63,23 +63,31 @@
         <h1 class="text-center">Get in touch!</h1>
         
         <!--Incomplete form-->
-        <div id="error"></div>
+        <div id="error_message"></div>
 
         <!--Form-->
-        <form method="post" action="mail.php">
+        <?php 
+            $action = $_REQUEST['action'];
+            if ($action == "") {
+        ?>
+        <form method="post" action="">
             <!-- Success message -->
             <div class="row">
                 <div class="col-12">
-                    <div class="contact__msg" style="display: none">
+                    <div id="success_message" class="contact__msg" style="display: none">
                         <p>Your message was sent successfully.</p>
                     </div>
                 </div>
             </div>
-
+            
             <div class="form-group">
                 <label for="exampleInputEmail1">Email address</label>
                 <input type="email" class="form-control" id="email" name="email" aria-describedby="emailHelp" placeholder="Enter email" required>
                 <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+            </div>
+            <div class="form-group">
+                <label for="exampleInputPassword1">Name</label>
+                <input type="text" class="form-control" id="name" name="name" required>
             </div>
             <div class="form-group">
                 <label for="exampleInputPassword1">Subject</label>
@@ -96,6 +104,22 @@
                 <input type="submit" class="btn btn-primary" value="Submit">
             </form>
         </form>
+        <?php 
+        } else {
+            $name = $_REQUEST['name'];
+            $email = $_REQUEST['email'];
+            $message = $_REQUEST['message'];
+            $subject = $_REQUEST['subject'];
+            if (($name=="") || ($email=="") || ($message=="") || ($subject=="")) {
+                echo "yea fill out forms";
+            } else {
+                $from = "From $name<$email>\r\nReturn-path: $email";
+                $subject = "Contact Page: $subject";
+                mail("jaCIBC2018@gmail.com", $subject, $message, $from);
+                echo "sent";
+            }
+        }
+        ?>
     </div>
     <hr width="50%">
 
