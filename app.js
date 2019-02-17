@@ -28,6 +28,11 @@ app.use(express.static(`${__dirname}/public`));
 
 // Creating routing path
 app.use('/', routes);
+app.get('/', (req, res) => {
+    res.render('index', {
+        stripePublishableKey: keys.stripePublishableKey
+    })
+});
 app.use('/features', features);
 app.use('/store', store);
 app.use('/contact', contact);
