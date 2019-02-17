@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/contact.css">
+    <link rel="shortcut icon" href="/img/icon.png" type="image/png">
+
+    <!-- Add icon library -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <!--reCaptcha Script-->
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+
+    <title><%= title %></title>
+  </head>
+  <body>
+    <!--Nav bar-->
+    <% include templates/header.ejs %>
+
+    <!--Landing page-->
+    <div class="jumbotron fade bg-light">
+        <div class="h-100 row justify-content-center">
+            <div class="col-md-6 text-center">
+                <h2 class="display-3 mt-3 pt-5"><span id="header-animation"></span></h2>
+                <p class="lead">We would love to hear back from the community!</p>
+            </div>
+        </div>
+      </div>
+    <hr width="50%" class="hideElement">
+
+    <!--Contact Form-->
+    <div class="container">
+        <h1 class="text-center">Get in touch!</h1>
+        
+        <!--Incomplete form-->
+        <div id="error_message"></div>
+
+        <!--Form-->
+        <form method="post" action="">
+            <!-- Success message -->
+            <div class="row">
+                <div class="col-12">
+                    <div id="success_message" class="contact__msg" style="display: none">
+                        <p>Your message was sent successfully.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="form-group">
+                <label for="exampleInputEmail1">Email address</label>
+                <input type="email" class="form-control" id="email" name="email" aria-describedby="emailHelp" placeholder="Enter email" required>
+                <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+            </div>
+            <div class="form-group">
+                <label for="exampleInputPassword1">Name</label>
+                <input type="text" class="form-control" id="name" name="name" required>
+            </div>
+            <div class="form-group">
+                <label for="exampleInputPassword1">Subject</label>
+                <input type="text" class="form-control" id="subject" name="subject" required>
+            </div>
+            <div class="form-group">
+                <label for="exampleInputPassword1">Message</label>
+                <textarea class="form-control" id="message" name="message" rows="5" placeholder="Enter your response here." required></textarea>
+            </div>
+
+            <form action="?" method="POST">
+                <div class="g-recaptcha" data-sitekey="6LdL2ZEUAAAAAFBg_ZAio2_towHIJ83rBLRxQbNp"></div>
+                <br/>
+                <input type="submit" class="btn btn-primary" value="Submit">
+            </form>
+        </form>
+    </div>
+    <hr width="50%">
+ 
+    <% include templates/footer.ejs %>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.1.0.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+
+    <!-- Load React. -->
+    <!-- Note: when deploying, replace "development.js" with "production.min.js". -->
+    <script src="https://unpkg.com/react@16/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js" crossorigin></script>
+
+    <!-- Load Typed.js -->
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.9"></script>
+
+    <!--JS-->
+    <script src="/js/contact.js"></script>
+    <script src="/js/index.js"></script>
+  </body>
+</html>
