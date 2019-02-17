@@ -1,17 +1,19 @@
 {
-  "name": "biocase",
+  "name": "rootcase",
   "version": "1.0.0",
-  "description": "App to sell phone case",
+  "description": "",
   "main": "app.js",
   "scripts": {
     "start": "node app.js"
   },
-  "author": "RootCase, a JA Company Canada",
+  "author": "",
   "license": "ISC",
   "dependencies": {
     "body-parser": "^1.18.3",
+    "ejs": "^2.6.1",
     "express": "^4.16.4",
-    "express-handlebars": "^3.0.0",
-    "stripe": "^6.23.1"
+    "nodemailer": "^5.1.1",
+    "php-node": "0.0.2",
+    "stripe": "^6.25.1"
   }
 }

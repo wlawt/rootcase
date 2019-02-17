@@ -1,4 +1,5 @@
 .jumbotron {
     height: 400px;
-    background-image: none;
+    background-image: none !important;
+
 }
