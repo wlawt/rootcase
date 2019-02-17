@@ -12,6 +12,7 @@
     "body-parser": "^1.18.3",
     "ejs": "^2.6.1",
     "express": "^4.16.4",
+    "nodemailer": "^5.1.1",
     "php-node": "0.0.2",
     "stripe": "^6.25.1"
   }
