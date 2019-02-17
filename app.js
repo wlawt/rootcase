@@ -18,6 +18,7 @@ const app = express();
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
 
+
 // Body Parser Middleware
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
@@ -30,6 +31,7 @@ app.use('/', routes);
 app.use('/features', features);
 app.use('/store', store);
 app.use('/contact', contact);
+
 
 // Charge route
 app.post('/charge', (req, res) => {
@@ -106,7 +108,6 @@ app.post('/send', (req, res) => {
     
     main().catch(console.error);
 });
-
 
 const port = process.env.PORT || 5000;
 
