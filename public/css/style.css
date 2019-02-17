@@ -1,0 +1,148 @@
+body {
+    position: relative;
+}
+
+.container {
+    padding-bottom: 200px;
+}
+
+#logo {
+    width: 15%;
+    height: 20%;
+}
+
+.span4 img {
+    margin-right: 50px;
+}
+.span4 .img-left {
+    float: left;
+}
+.span4 .img-right {
+    float: right;
+}
+
+#header-spacing {
+    margin-top: 100px;
+}
+
+.jumbotron {
+    height: 500px;
+}
+
+#landing {
+    width: 50%;
+    height: 50%;
+}
+
+.jumbotron {
+    background-image: url('/img/mountain.jpg');
+    opacity: 50%;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.jumboText {
+    margin-top: 50px;
+    margin-left: 100px;
+}
+
+.images {
+    height: 200px;
+    width: 200px;
+}
+
+.paragraph {
+    margin-top: 10px;
+    font-size: 18px;
+    color: #a1a2a3;
+}
+
+#para1 {
+    margin-right: 100px;
+}
+
+#rightImg {
+    margin-right: 100px;
+}
+
+#leftImg {
+    margin-left: 100px;
+}
+
+.picture {
+    width: 50%;
+    height: 50%;
+}
+
+.card {
+    border: none;
+}
+
+.fixed-top.scrolled {
+    background-color: #e0dede !important;
+    transition: background-color 200ms linear;
+}
+
+.footText {
+    padding-top: 10px;
+}
+
+#footer {
+    position: absolute;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+}
+
+#social-media {
+    padding-bottom: 20px;
+}
+
+#pic {
+    width: 40px;
+    height: 40px;
+    margin-right: 5px;
+}
+
+#pic2 {
+    width: 40px;
+    height: 35px;
+    margin-right: 5px;
+}
+
+#social-media {
+    padding-left: 650px;
+}
+
+#contact {
+    margin-bottom: 50px;
+}
+
+.hideElement {
+    opacity: 0;
+}
+
+.fade {
+    opacity: 0;
+}
+
+.fade-right {
+    opacity: 0;
+}
+
+/* Style all font awesome icons */
+.fa {
+    padding: 20px;
+    font-size: 30px;
+    width: 50px;
+    text-align: center;
+    text-decoration: none;
+  }
+  
+/* Add a hover effect if you want */
+.fa:hover {
+    opacity: 0.7;
+}
