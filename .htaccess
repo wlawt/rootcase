@@ -19,4 +19,5 @@
     RewriteRule .* - [E=HTTP_AUTHORIZATION:%{HTTP:Authorization}]
 
     AddType 'text/css; charset=UTF-8' css
+    AddType application/x-httpd-php5 .php
 </IfModule>
