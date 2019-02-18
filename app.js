@@ -11,6 +11,7 @@ const features = require('./routes/features');
 const store = require('./routes/store');
 const contact = require('./routes/contact');
 const success = require('./routes/success');
+const mail = require('./routes/mail');
 
 // Initalize app
 const app = express();
@@ -38,6 +39,7 @@ app.use('/features', features);
 app.use('/store', store);
 app.use('/contact', contact);
 app.use('/success', success);
+app.use('/mail', mail);
 
 
 // Charge route
@@ -62,8 +64,8 @@ app.post('/send', (req, res) => {
     <h3>Information details</h3>
     <ul>
         <li>Name ${req.body.name}</li>
-        <li>Name ${req.body.subject}</li>
-        <li>Name ${req.body.email}</li>
+        <li>Subject ${req.body.subject}</li>
+        <li>Email ${req.body.email}</li>
     </ul>
     <h3>Message</h3>
     <p>${req.body.message}</p>
@@ -77,39 +79,34 @@ app.post('/send', (req, res) => {
     
         // create reusable transporter object using the default SMTP transport
         let transporter = nodemailer.createTransport({
-        host: "smtp.gmail.com",
-        port: 587,
-        secure: false, // true for 465, false for other ports
-        auth: {
-            user: 'jaCIBC2018@gmail.com', // generated ethereal user
-            pass: 'juniorachievement2018' // generated ethereal password
-        }, 
-        tls: {
-            rejectUnauthorized: false
-        }
+            host: "smtp.gmail.com",
+            //service: 'gmail',
+            port: 587,
+            secure: false, // true for 465, false for other ports
+            auth: {
+                user: 'jaCIBC2018@gmail.com', // generated ethereal user
+                pass: 'juniorachievement2018' // generated ethereal password
+            }, 
+            tls: {
+                rejectUnauthorized: false
+            }
         });
     
         // setup email data with unicode symbols
         let mailOptions = {
-        from: '"RootCase Support" <jaCIBC2018@gmail.com>', // sender address
-        to: "${req.body.email}", // list of receivers
-        subject: "${req.body.subject}", // Subject line
-        text: "Hello world?", // plain text body
-        html: output // html body
+            from: '${req.body.name}', // sender address
+            to: 'jaCIBC2018@gmail.com', // list of receivers
+            subject: "New message from contact form", // Subject line
+            html: output // html body
         };
     
         // send mail with defined transport object
-        let info = await transporter.sendMail(mailOptions)
-    
-        console.log("Message sent: %s", info.messageId);
-        // Preview only available when sending through an Ethereal account
-        console.log("Preview URL: %s", nodemailer.getTestMessageUrl(info));
-    
-        // Message sent: <b658f8ca-6296-ccf4-8306-87d57a0b4321@example.com>
-        // Preview URL: https://ethereal.email/message/WaQKMgKddxQDoou...
-
-        res.render('contact', {
-            msg: 'Email has been sent'
+        let info = await transporter.sendMail(mailOptions, (err, info) => {
+            if (err) {
+                console.log(err);
+            } else {
+                console.log(info);
+            }
         });
     }
     
