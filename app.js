@@ -5,13 +5,14 @@ const bodyParser = require('body-parser');
 const path = require('path');
 const nodemailer = require('nodemailer');
 
-// Creating routing var
+// Creating routing var for routes file
 const routes = require('./routes/index');
 const features = require('./routes/features');
 const store = require('./routes/store');
 const contact = require('./routes/contact');
+const contact_send = require('./routes/contact_send');
+const contact_error = require('./routes/contact_error');
 const success = require('./routes/success');
-const mail = require('./routes/mail');
 
 // Initalize app
 const app = express();
@@ -28,7 +29,7 @@ app.use(bodyParser.urlencoded({ extended: false }));
 // Set static folder 
 app.use(express.static(`${__dirname}/public`));
 
-// Creating routing path
+// Creating routing path for ejs files
 app.use('/', routes);
 app.get('/', (req, res) => {
     res.render('store', {
@@ -39,8 +40,8 @@ app.use('/features', features);
 app.use('/store', store);
 app.use('/contact', contact);
 app.use('/success', success);
-app.use('/mail', mail);
-
+app.use('/contact_send', contact_send);
+app.use('/contact_error', contact_error);
 
 // Charge route
 app.post('/charge', (req, res) => {
@@ -58,6 +59,7 @@ app.post('/charge', (req, res) => {
 });
 
 // Contact route
+
 app.post('/send', (req, res) => {
     const output = `
     <p>You have a new message:</p>
@@ -104,14 +106,17 @@ app.post('/send', (req, res) => {
         let info = await transporter.sendMail(mailOptions, (err, info) => {
             if (err) {
                 console.log(err);
+                res.redirect('/contact_error');
             } else {
                 console.log(info);
+                res.redirect('/contact_send');
             }
         });
     }
     
     main().catch(console.error);
 });
+
 
 const port = process.env.PORT || 5000;
 

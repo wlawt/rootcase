@@ -1,11 +1,11 @@
 const express = require('express');
 const router = express.Router();
 
-// Get home page
+// Get contact send page
 router.get('/', function(req, res) {
-    res.render('mail', {
-        title: 'Mail Sent!',
-        name: 'Mail Sent!'
+    res.render('contact_send', {
+        title: 'Email Sent!',
+        name: 'Email Sent!'
     });
 });
 
