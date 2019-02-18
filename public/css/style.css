@@ -89,14 +89,6 @@ body {
     padding-top: 10px;
 }
 
-#footer {
-    position: absolute;
-    right: 0;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-}
-
 #social-media {
     padding-bottom: 20px;
 }
