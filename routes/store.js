@@ -9,7 +9,7 @@ router.get('/', function(req, res) {
     res.render('store', {
         title: 'Rootcase - Store',
         name: 'Rootcase - Store', 
-        stripePublishableKey: keys.stripePublishableKey
+        //stripePublishableKey: keys.stripePublishableKey
     });
 });
 
