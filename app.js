@@ -10,6 +10,7 @@ const routes = require('./routes/index');
 const features = require('./routes/features');
 const store = require('./routes/store');
 const contact = require('./routes/contact');
+const success = require('./routes/success');
 
 // Initalize app
 const app = express();
@@ -36,6 +37,7 @@ app.get('/', (req, res) => {
 app.use('/features', features);
 app.use('/store', store);
 app.use('/contact', contact);
+app.use('/success', success);
 
 
 // Charge route
