@@ -31,11 +31,6 @@ app.use(express.static(`${__dirname}/public`));
 
 // Creating routing path for ejs files
 app.use('/', routes);
-app.get('/', (req, res) => {
-    res.render('store', {
-        stripePublishableKey: keys.stripePublishableKey
-    })
-});
 app.use('/features', features);
 app.use('/store', store);
 app.use('/contact', contact);
