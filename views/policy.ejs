@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <!--Bootstrap-->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/template.css">
+    <link rel="shortcut icon" href="/img/icon.png" type="image/png">
+
+    <!-- Add icon library -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <!--reCaptcha Script-->
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+
+    <!-- Load Stripe.js on your website. -->
+    <script src="https://js.stripe.com/v3"></script>
+
+    <title><%= title %></title>
+</head>
+<body>
+    <!--Nav bar-->
+    <% include templates/header.ejs %>
+    
+    <div class="container onePager" style="padding-top:100px;">
+        <h3 class="display-4">Policy and Returns</h3>
+        <p class="lead">
+            All purchases are final sale. No returns or refund. We apologize in advance for 
+            inconvenience. 
+        </p>
+        <p>
+            Credit card information, shipping/billing information, personal information is kept
+            secured via HTTPS connection. Rootcase does not store any personal information. All
+            transactions are handled using <a href="https://www.stripe.com">Stipe's API</a>. If you
+            have any questions about anything, you can contact us <a href="/contact">here</a>.
+        </p>
+    </div>
+
+    <% include templates/footer.ejs %>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.1.0.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+
+    <script src="/js/index.js"></script>
+</body>
+</html>

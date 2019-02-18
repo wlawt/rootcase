@@ -15,6 +15,14 @@
     padding-bottom: 100px !important;
 } 
 
-.contact-send, .contact-error, .success {
-    padding-bottom: 350px !important;
+.onePager {
+    padding-bottom: 410px !important;
+}
+
+.one-pager {
+    padding-bottom: 300px !important;
+}
+
+.no-css {
+    padding-bottom: 10px !important;
 }

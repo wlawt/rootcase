@@ -13,6 +13,8 @@ const contact = require('./routes/contact');
 const contact_send = require('./routes/contact_send');
 const contact_error = require('./routes/contact_error');
 const success = require('./routes/success');
+const terms = require('./routes/terms');
+const policy = require('./routes/policy');
 
 // Initalize app
 const app = express();
@@ -37,6 +39,8 @@ app.use('/contact', contact);
 app.use('/success', success);
 app.use('/contact_send', contact_send);
 app.use('/contact_error', contact_error);
+app.use('/terms', terms);
+app.use('/policy', policy);
 
 // Charge route
 app.post('/charge', (req, res) => {
@@ -111,7 +115,6 @@ app.post('/send', (req, res) => {
     
     main().catch(console.error);
 });
-
 
 const port = process.env.PORT || 5000;
 

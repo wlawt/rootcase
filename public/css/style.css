@@ -6,6 +6,15 @@ body {
     padding-bottom: 200px;
 }
 
+.no-dec {
+    text-decoration: none;
+    color: black;
+}
+
+.no-css {
+    padding-bottom: 10px !important;
+}
+
 #logo {
     width: 15%;
     height: 20%;
