@@ -34,9 +34,27 @@
                 </h1>
                 <p class="lead">A case that doesn't pollute our space!</p>
                 
-                <!-- Create a button that your customers click to complete their purchase. -->
-                <button id="checkout-button" class="btn btn-outline-primary btn-lg" role="link">Purchase for $19.99 CAD</button>
-                <div id="error-message"></div>
+                <form action="/charge" method="POST">
+                  <script
+                      src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+                      data-key="pk_test_OCXS1LgwMg9Cj806KWhX1tqn"
+                      data-amount="1999"
+                      data-name="iPhone X/Xs BioCase"
+                      data-description="A biodegradeable phone case"
+                      data-image="/img/marketplace.png"
+                      data-locale="auto"
+                      data-currency="cad"
+                      data-shippingAddress="true"
+                      data-billingAddress="true"
+                      data-zip-code="true">
+                  </script>
+                  <script>
+                      // Hide default stripe button
+                      document.getElementsByClassName('stripe-button-el')[0].style.display = 'none';
+                  </script>
+                  <button type="submit" class="btn btn-outline-primary btn-lg">Purchase For $19.99 CAD</button>
+                </form>
+                <br>
             </div>
             <div class="col-md-6">
                 <img src="/img/product.png" alt="" class="img-fluid">
@@ -53,33 +71,5 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
 
     <script src="/js/index.js"></script>
-    <script>
-        var stripe = Stripe('pk_test_OCXS1LgwMg9Cj806KWhX1tqn', {
-          betas: ['checkout_beta_4']
-        });
-      
-        var checkoutButton = document.getElementById('checkout-button');
-        checkoutButton.addEventListener('click', function () {
-          // When the customer clicks on the button, redirect
-          // them to Checkout.
-          stripe.redirectToCheckout({
-            items: [{sku: 'sku_EY6BdClmW4f4OQ', quantity: 1}],
-      
-            // Note that it is not guaranteed your customers will be redirected to this
-            // URL *100%* of the time, it's possible that they could e.g. close the
-            // tab between form submission and the redirect.
-            successUrl: 'https://www.rootcase.net/success',
-            cancelUrl: 'https://www.rootcase.net/store',
-          })
-          .then(function (result) {
-            if (result.error) {
-              // If `redirectToCheckout` fails due to a browser or network
-              // error, display the localized error message to your customer.
-              var displayError = document.getElementById('error-message');
-              displayError.textContent = result.error.message;
-            }
-          });
-        });
-      </script>
 </body>
 </html>

@@ -1,7 +1,7 @@
 const express = require('express');
 const router = express.Router();
 
-// Get feature page
+// Get success page
 router.get('/', function(req, res) {
     res.render('success', {
         title: 'Purchase Success!',

@@ -30,7 +30,7 @@ app.use(express.static(`${__dirname}/public`));
 // Creating routing path
 app.use('/', routes);
 app.get('/', (req, res) => {
-    res.render('index', {
+    res.render('store', {
         stripePublishableKey: keys.stripePublishableKey
     })
 });
@@ -51,7 +51,7 @@ app.post('/charge', (req, res) => {
         amount, 
         description: 'iPhone 7/8 BioCase',
         currency: 'cad',
-        customer: customer.id
+        customer: customer.id 
     })).then(charge => res.render('success'));
 });
 
