@@ -128,8 +128,10 @@ app.post('/send', (req, res) => {
         // send mail with defined transport object
         let info = await transporter.sendMail(mailOptions, (err, info) => {
             if (err) {
-                console.log(err);
-                res.redirect('/contact_error');
+                if(!captchaSolved) {
+                    console.log(err);
+                    res.redirect('/contact_error');
+                }
             } else {
                 if(captchaSolved) {
                     console.log(info);
