@@ -78,13 +78,16 @@ app.post('/send', (req, res) => {
 
     var secretKey = "6LdL2ZEUAAAAAEfYGq2ElB9Ex5HWgjehdtHUyt6L";
     var verificationUrl = "https://www.google.com/recaptcha/api/siteverify?secret=" + secretKey + "&response=" + req.body['g-recaptcha-response'] + "&remoteip=" + req.connection.remoteAddress;
+    var captchaSolved = false;
 
     request(verificationUrl, (error, response, body) => {
         body = JSON.parse(body);
         if(body.success !== undefined && !body.success) {
-            return res.json({"responseCode" : 1, "responseDesc" : "Failed captcha verification"});
+            captchaSolved = false;
+            //return res.json({"responseCode" : 1, "responseDesc" : "Failed captcha verification"});
         }
-        res.json({"responseCode" : 0, "responseDesc" : "Success"});
+        captchaSolved = true;
+        //res.json({"responseCode" : 0, "responseDesc" : "Success"});
     });
 
     // Error in captcha
@@ -92,6 +95,7 @@ app.post('/send', (req, res) => {
         res.status(404).send("404");
     });
 
+    if(captchaSolved) {
     // async..await is not allowed in global scope, must use a wrapper
     async function main(){
         // Generate test SMTP service account from ethereal.email
@@ -132,6 +136,7 @@ app.post('/send', (req, res) => {
                 res.redirect('/contact_send');
             }
         });
+    }
     }
 
     
