@@ -83,7 +83,7 @@ app.post('/send', (req, res) => {
     request(verificationUrl, (error, response, body) => {
         body = JSON.parse(body);
         if(body.success !== undefined && !body.success) {
-            captchaSolved = false;
+            return captchaSolved = false;
             //return res.json({"responseCode" : 1, "responseDesc" : "Failed captcha verification"});
         }
         captchaSolved = true;
