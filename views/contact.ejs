@@ -16,6 +16,7 @@
 
     <!--reCaptcha Script-->
     <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+    <script src='https://www.google.com/recaptcha/api.js?onload=reCaptchaCallback&render=explicit'></script>
 
     <title><%= title %></title>
   </head>
@@ -62,7 +63,7 @@
             </div>
 
             
-            <form action="?" method="POST">
+            <form id="contact-form" action="?" method="POST">
                 <div class="g-recaptcha" data-sitekey="6LdL2ZEUAAAAAFBg_ZAio2_towHIJ83rBLRxQbNp"></div>
                 <br/>
                 <input type="submit" class="btn btn-primary" value="Submit">
@@ -82,15 +83,26 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
 
-    <!-- Load React. -->
-    <!-- Note: when deploying, replace "development.js" with "production.min.js". -->
-    <script src="https://unpkg.com/react@16/umd/react.development.js" crossorigin></script>
-    <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js" crossorigin></script>
-
     <!-- Load Typed.js -->
     <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.9"></script>
 
     <!--JS-->
+    <script>
+        $(document).ready(function() {
+            $('#contact-form').submit(function() {
+                $(this).ajaxSubmit({
+                    error: function(xhr) {
+                        status('Error: ' + xhr.status);
+                    },
+                    success: function(response) {
+                        console.log(response);
+                    }
+                });
+                return false;
+            });
+        });
+    </script>
+
     <script src="/js/contact.js"></script>
     <script src="/js/index.js"></script>
   </body>
