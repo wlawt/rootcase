@@ -16,6 +16,7 @@ const contact_error = require('./routes/contact_error');
 const success = require('./routes/success');
 const terms = require('./routes/terms');
 const policy = require('./routes/policy');
+const error = require('./routes/error');
 
 // Initalize app
 const app = express();
@@ -42,6 +43,7 @@ app.use('/contact_send', contact_send);
 app.use('/contact_error', contact_error);
 app.use('/terms', terms);
 app.use('/policy', policy);
+app.use('/error', error);
 
 // Charge route
 app.post('/charge', (req, res) => {
@@ -59,8 +61,7 @@ app.post('/charge', (req, res) => {
 });
 
 // Contact route
-
-app.post('/send', (req, res) => {
+app.post('/send', (req, res, next) => {
     const output = `
     <p>You have a new message:</p>
     <h3>Information details</h3>
@@ -73,10 +74,11 @@ app.post('/send', (req, res) => {
     <p>${req.body.message}</p>
     `
     var captchaSolved = false;
+    var view = false;
 
     if (req.body['g-recaptcha-response'] === undefined || req.body['g-recaptcha-response'] === '' || req.body['g-recaptcha-response'] === null) {
         //return res.json({"responseCode" : 1, "responseDesc" : "Please select captcha"});
-        return res.redirect('/contact_error');
+        return res.redirect('/contact_error'), view = true;
     }
 
     var secretKey = "6LdL2ZEUAAAAAEfYGq2ElB9Ex5HWgjehdtHUyt6L";
@@ -86,9 +88,10 @@ app.post('/send', (req, res) => {
     request(verificationUrl, (error, response, body) => {
         body = JSON.parse(body);
         if(body.success !== undefined && !body.success) {
-            return captchaSolved = false;
+            return captchaSolved = false, view = true;
             //return res.json({"responseCode" : 1, "responseDesc" : "Failed captcha verification"});
         }
+        view = true;
         captchaSolved = true;
         //res.json({"responseCode" : 0, "responseDesc" : "Success"});
     });
@@ -131,14 +134,20 @@ app.post('/send', (req, res) => {
         // send mail with defined transport object
         let info = await transporter.sendMail(mailOptions, (err, info) => {
             if (err) {
-                if(!captchaSolved) {
+                if(!captchaSolved && view) {
                     console.log(err);
                     res.redirect('/contact_error');
+                    var views = true;
+                } else {
+                    res.redirect('/error');
                 }
             } else {
-                if(captchaSolved) {
+                if(captchaSolved && view) {
                     console.log(info);
                     res.redirect('/contact_send');
+                    var views = true;
+                } else {
+                    res.redirect('/error');
                 }
             }
         });
