@@ -85,7 +85,14 @@ app.post('/send', (req, res) => {
             return res.json({"responseCode" : 1, "responseDesc" : "Failed captcha verification"});
         }
         res.json({"responseCode" : 0, "responseDesc" : "Success"});
-            // async..await is not allowed in global scope, must use a wrapper
+    });
+
+    // Error in captcha
+    app.use("*", (req, res) => {
+        res.status(404).send("404");
+    });
+
+    // async..await is not allowed in global scope, must use a wrapper
     async function main(){
 
         // Generate test SMTP service account from ethereal.email
@@ -127,12 +134,6 @@ app.post('/send', (req, res) => {
             }
         });
     }
-    });
-
-    // Error in captcha
-    app.use("*", (req, res) => {
-        res.status(404).send("404");
-    });
 
     
     main().catch(console.error);
