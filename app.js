@@ -95,7 +95,6 @@ app.post('/send', (req, res) => {
         res.status(404).send("404");
     });
 
-    if(captchaSolved) {
     // async..await is not allowed in global scope, must use a wrapper
     async function main(){
         // Generate test SMTP service account from ethereal.email
@@ -125,7 +124,7 @@ app.post('/send', (req, res) => {
             subject: "New message from contact form", // Subject line
             html: output // html body
         };
-    
+        if(captchaSolved) {
         // send mail with defined transport object
         let info = await transporter.sendMail(mailOptions, (err, info) => {
             if (err) {
@@ -138,8 +137,7 @@ app.post('/send', (req, res) => {
         });
     }
     }
-
-    
+        
     main().catch(console.error);
 });
 
