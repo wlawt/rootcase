@@ -82,11 +82,9 @@ app.post('/send', (req, res) => {
     request(verificationUrl, (error, response, body) => {
         body = JSON.parse(body);
         if(body.success !== undefined && !body.success) {
-            res.redirect('/contact_error');
             return res.json({"responseCode" : 1, "responseDesc" : "Failed captcha verification"});
         }
         res.json({"responseCode" : 0, "responseDesc" : "Success"});
-        res.redirect('/contact_send');
     });
 
     // Error in captcha
@@ -96,7 +94,6 @@ app.post('/send', (req, res) => {
 
     // async..await is not allowed in global scope, must use a wrapper
     async function main(){
-
         // Generate test SMTP service account from ethereal.email
         // Only needed if you don't have a real mail account for testing
         let account = await nodemailer.createTestAccount();
