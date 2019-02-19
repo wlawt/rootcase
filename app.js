@@ -82,9 +82,11 @@ app.post('/send', (req, res) => {
     request(verificationUrl, (error, response, body) => {
         body = JSON.parse(body);
         if(body.success !== undefined && !body.success) {
+            res.redirect('/contact_error');
             return res.json({"responseCode" : 1, "responseDesc" : "Failed captcha verification"});
         }
         res.json({"responseCode" : 0, "responseDesc" : "Success"});
+        res.redirect('/contact_send');
     });
 
     // Error in captcha
