@@ -124,18 +124,19 @@ app.post('/send', (req, res) => {
             subject: "New message from contact form", // Subject line
             html: output // html body
         };
-        if(captchaSolved) {
+        
         // send mail with defined transport object
         let info = await transporter.sendMail(mailOptions, (err, info) => {
             if (err) {
                 console.log(err);
                 res.redirect('/contact_error');
             } else {
-                console.log(info);
-                res.redirect('/contact_send');
+                if(captchaSolved) {
+                    console.log(info);
+                    res.redirect('/contact_send');
+                }
             }
         });
-    }
     }
         
     main().catch(console.error);
