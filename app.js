@@ -75,7 +75,7 @@ app.post('/send', (req, res) => {
     var captchaSolved = false;
 
     if (req.body['g-recaptcha-response'] === undefined || req.body['g-recaptcha-response'] === '' || req.body['g-recaptcha-response'] === null) {
-        return captchaSolved;
+        alert('Please select captcha!');
         //return res.json({"responseCode" : 1, "responseDesc" : "Please select captcha"});
     }
 
