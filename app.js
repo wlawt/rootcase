@@ -75,8 +75,8 @@ app.post('/send', (req, res) => {
     var captchaSolved = false;
 
     if (req.body['g-recaptcha-response'] === undefined || req.body['g-recaptcha-response'] === '' || req.body['g-recaptcha-response'] === null) {
-        return alert('Please select captcha!');
         //return res.json({"responseCode" : 1, "responseDesc" : "Please select captcha"});
+        return res.redirect('/contact_error');
     }
 
     var secretKey = "6LdL2ZEUAAAAAEfYGq2ElB9Ex5HWgjehdtHUyt6L";
