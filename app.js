@@ -72,13 +72,16 @@ app.post('/send', (req, res) => {
     <h3>Message</h3>
     <p>${req.body.message}</p>
     `
+    var captchaSolved = false;
+
     if (req.body['g-recaptcha-response'] === undefined || req.body['g-recaptcha-response'] === '' || req.body['g-recaptcha-response'] === null) {
-        return res.json({"responseCode" : 1, "responseDesc" : "Please select captcha"});
+        return captchaSolved;
+        //return res.json({"responseCode" : 1, "responseDesc" : "Please select captcha"});
     }
 
     var secretKey = "6LdL2ZEUAAAAAEfYGq2ElB9Ex5HWgjehdtHUyt6L";
     var verificationUrl = "https://www.google.com/recaptcha/api/siteverify?secret=" + secretKey + "&response=" + req.body['g-recaptcha-response'] + "&remoteip=" + req.connection.remoteAddress;
-    var captchaSolved = false;
+    
 
     request(verificationUrl, (error, response, body) => {
         body = JSON.parse(body);
