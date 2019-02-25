@@ -5,6 +5,8 @@ const bodyParser = require('body-parser');
 const path = require('path');
 const nodemailer = require('nodemailer');
 const request = require('request');
+const passport = require('passport');
+const session = require('express-session');
 
 // Creating routing var for routes file
 const routes = require('./routes/index');
@@ -17,6 +19,9 @@ const success = require('./routes/success');
 const terms = require('./routes/terms');
 const policy = require('./routes/policy');
 const error = require('./routes/error');
+
+// Passport config
+//require('./config/passport')(passport);
 
 // Initalize app
 const app = express();
@@ -32,6 +37,13 @@ app.use(bodyParser.urlencoded({ extended: false }));
 
 // Set static folder 
 app.use(express.static(`${__dirname}/public`));
+
+// Express session middelware
+app.use(session({
+    secret: 'secret',
+    resave: true,
+    saveUninitialized: true
+}));
 
 // Creating routing path for ejs files
 app.use('/', routes);
