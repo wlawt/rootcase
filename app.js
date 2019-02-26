@@ -179,7 +179,7 @@ app.post('/send', (req, res, next) => {
                 if(captchaSolved && view) {
                     console.log(info);
                     views = true;
-                    res.redirect(303, '/contact_send');
+                    res.redirect('/contact_send', 301, true);
                 } else {
                     res.redirect('/error');
                 }
