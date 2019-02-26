@@ -75,6 +75,16 @@ app.post('/charge', (req, res) => {
     })).then(charge => res.render('success'));
 });
 
+app.get('/contact_send', (req, res) => {
+    if(views) {
+        console.log("true");
+        res.redirect('/contact_send');
+    } else {
+        console.log("false");
+        res.redirect('/error');
+    }
+});
+
 // Error handling for charge route
 app.get('/charge', (req, res) => {
     res.redirect('/error');
@@ -161,8 +171,7 @@ app.post('/send', (req, res, next) => {
             if (err) {
                 if(!captchaSolved && view) {
                     console.log(err);
-                    res.redirect('/contact_error');
-                    views = true;
+                    next();
                 } else {
                     res.redirect('/error');
                 }
@@ -170,11 +179,7 @@ app.post('/send', (req, res, next) => {
                 if(captchaSolved && view) {
                     console.log(info);
                     views = true;
-                    if (views) {
-                        res.redirect('/contact_send');
-                    } else {
-                        res.redirect('/error');
-                    }
+                    res.redirect(307, '/contact_send');
                 } else {
                     res.redirect('/error');
                 }
@@ -184,14 +189,6 @@ app.post('/send', (req, res, next) => {
     views = false;
         
     main().catch(console.error);
-});
-
-app.get('/contact_send', (req, res) => {
-    if(views) {
-        res.redirect('/contact_send');
-    } else {
-        res.redirect('/error');
-    }
 });
 
 const port = process.env.PORT || 5000;
