@@ -177,6 +177,7 @@ app.post('/send', (req, res, next) => {
             }
         });
     }
+    views = false;
         
     main().catch(console.error);
 });
