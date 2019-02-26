@@ -169,8 +169,12 @@ app.post('/send', (req, res, next) => {
             } else {
                 if(captchaSolved && view) {
                     console.log(info);
-                    res.redirect('/contact_send');
                     views = true;
+                    if (views) {
+                        res.redirect('/contact_send');
+                    } else {
+                        res.redirect('/error');
+                    }
                 } else {
                     res.redirect('/error');
                 }
