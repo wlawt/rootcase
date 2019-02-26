@@ -20,6 +20,9 @@ const terms = require('./routes/terms');
 const policy = require('./routes/policy');
 const error = require('./routes/error');
 
+// Global var
+var views = true;
+
 // Passport config
 //require('./config/passport')(passport);
 
@@ -72,8 +75,13 @@ app.post('/charge', (req, res) => {
     })).then(charge => res.render('success'));
 });
 
-// Render error for charge route
+// Error handling for charge route
 app.get('/charge', (req, res) => {
+    res.redirect('/error');
+});
+
+// Error handling for send route
+app.get('/send', (req, res) => {
     res.redirect('/error');
 });
 
@@ -154,7 +162,7 @@ app.post('/send', (req, res, next) => {
                 if(!captchaSolved && view) {
                     console.log(err);
                     res.redirect('/contact_error');
-                    var views = true;
+                    views = true;
                 } else {
                     res.redirect('/error');
                 }
@@ -162,7 +170,7 @@ app.post('/send', (req, res, next) => {
                 if(captchaSolved && view) {
                     console.log(info);
                     res.redirect('/contact_send');
-                    var views = true;
+                    views = true;
                 } else {
                     res.redirect('/error');
                 }
@@ -171,6 +179,14 @@ app.post('/send', (req, res, next) => {
     }
         
     main().catch(console.error);
+});
+
+app.get('/contact_send', (req, res) => {
+    if(views) {
+        res.redirect('/contact_send');
+    } else {
+        res.redirect('/error');
+    }
 });
 
 const port = process.env.PORT || 5000;
