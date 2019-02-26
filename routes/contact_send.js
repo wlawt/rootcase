@@ -4,7 +4,9 @@ const passport = require('passport');
 const session = require('express-session');
 
 function ensureAuthenticated (req, res, next) {
-    if(!req.isAuthenticated()) {
+    if(req.isAuthenticated()) {
+        res.redirect('/contact_send')
+    } else {
         res.redirect('/error');
     }
 }
