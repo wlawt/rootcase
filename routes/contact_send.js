@@ -12,7 +12,7 @@ function ensureAuthenticated (req, res, next) {
 }
 
 // Get contact send page
-router.get('/', ensureAuthenticated, function(req, res) {
+router.get('/', function(req, res) {
     res.render('contact_send', {
         title: 'Email Sent!',
         name: 'Email Sent!'
