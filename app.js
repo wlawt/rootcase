@@ -21,7 +21,7 @@ const policy = require('./routes/policy');
 const error = require('./routes/error');
 
 // Global var
-var views = true;
+var views = false;
 
 // Passport config
 //require('./config/passport')(passport);
