@@ -4,9 +4,7 @@ const passport = require('passport');
 const session = require('express-session');
 
 function ensureAuthenticated (req, res, next) {
-    if(req.isAuthenticated()) {
-        return next();
-    } else {
+    if(!req.isAuthenticated()) {
         res.redirect('/error');
     }
 }
