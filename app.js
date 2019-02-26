@@ -72,6 +72,11 @@ app.post('/charge', (req, res) => {
     })).then(charge => res.render('success'));
 });
 
+// Render error for charge route
+app.get('/charge', (req, res) => {
+    res.redirect('/error');
+});
+
 // Contact route
 app.post('/send', (req, res, next) => {
     const output = `
