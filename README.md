@@ -3,6 +3,11 @@
 ###### The URL to this git repo can be found here: rootcase.net
 
 # What's new?
+## Feb. 26 Update
+###### Minor bug fixes
+###### Routing protection
+###### Fixed cloudflare and heroku deployment issue
+
 ## Feb. 18 Update
 ###### Cloudflare security has been added
 ###### Contact page and store page is complete 
