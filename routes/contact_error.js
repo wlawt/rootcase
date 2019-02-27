@@ -12,7 +12,7 @@ function ensureAuthenticated (req, res, next) {
 }
 
 // Get contact error page
-router.get('/', ensureAuthenticated, function(req, res) {
+router.get('/', function(req, res) {
     res.render('contact_error', {
         title: 'Error sending!',
         name: 'Error sending!'
