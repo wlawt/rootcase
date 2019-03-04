@@ -1,18 +1,26 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
 
     <!--Bootstrap-->
-    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
-    <link rel="stylesheet" href="/css/style.css">
-    <link rel="stylesheet" href="/css/template.css">
-    <link rel="shortcut icon" href="/img/icon.png" type="image/png">
+    <link
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/css/template.css" />
+    <link rel="shortcut icon" href="/img/icon.png" type="image/png" />
 
     <!-- Add icon library -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
 
     <!--reCaptcha Script-->
     <script src="https://www.google.com/recaptcha/api.js" async defer></script>
@@ -21,45 +29,79 @@
     <script src="https://js.stripe.com/v3"></script>
 
     <title><%= title %></title>
-</head>
-<body>
+  </head>
+  <body>
     <!--Nav bar-->
     <% include templates/header.ejs %>
-    
+
     <div class="container" style="padding-top:100px;">
-        <div class="row">
-            <div class="col-md-6 text-center">
-                <h1 class="display-3 mt-3 pt-5">
-                    iPhone X/Xs BioCase
-                </h1>
-                <p class="lead">A case that doesn't pollute our space!</p>
-                
-                <form action="/charge" method="POST">
-                  <script
-                      src="https://checkout.stripe.com/checkout.js" class="stripe-button"
-                      data-key="<%= stripePublishableKey %>"
-                      data-amount="1999"
-                      data-name="iPhone X/Xs BioCase"
-                      data-description="A biodegradeable phone case"
-                      data-image="/img/marketplace.png"
-                      data-locale="auto"
-                      data-currency="cad"
-                      data-shippingAddress="true"
-                      data-billingAddress="true"
-                      data-zip-code="true">
-                  </script>
-                  <script>
-                      // Hide default stripe button
-                      document.getElementsByClassName('stripe-button-el')[0].style.display = 'none';
-                  </script>
-                  <button type="submit" class="btn btn-outline-primary btn-lg">Purchase For $19.99 CAD</button>
-                </form>
-                <br>
-            </div>
-            <div class="col-md-6">
-                <img src="/img/product.png" alt="" class="img-fluid">
-            </div>
+      <div class="row">
+        <div class="col-md-6 text-center">
+          <h4 class="display-4 mt-3 pt-5">
+            Rootcase for iPhone X/XS - Coral Sand
+          </h1>
+          <p class="lead">
+                A case that doesn't pollute our space. Learn 
+                more below!
+          </p>
+
+          <form action="/charge" method="POST">
+            <script
+              src="https://checkout.stripe.com/checkout.js"
+              class="stripe-button"
+              data-key="<%= stripePublishableKey %>"
+              data-amount="1999"
+              data-name="iPhone X/Xs BioCase"
+              data-description="A biodegradeable phone case"
+              data-image="/img/marketplace.png"
+              data-locale="auto"
+              data-currency="cad"
+              data-shippingAddress="true"
+              data-billingAddress="true"
+              data-zip-code="true"
+            ></script>
+            <script>
+              // Hide default stripe button
+              document.getElementsByClassName(
+                'stripe-button-el'
+              )[0].style.display = 'none';
+            </script>
+            <button type="submit" class="btn btn-outline-primary btn-lg">
+              Purchase For $19.99 CAD
+            </button>
+          </form>
+          <br />
         </div>
+        <div class="col-md-6">
+          <img src="/img/product.png" alt="" class="img-fluid" />
+        </div>
+      </div>
+      <div class="row">
+            <h5 class="display-4 mt-3 pt-5">Description:</h5>
+            <p class="lead">
+                Available for iPhone X/XS, Rootcase is an eco-friendly alternative
+                to traditional plastic phone cases. 100% BPA-free and biodegradable,
+                by purchasing Rootcase you’re also supporting a plastic-free future
+                for the planet. Order today and get free shipping on all orders.
+            </p>
+              <p class="lead">
+                The soft and easy to grip texture of Rootcase offers a secure and 
+                comfortable feel in your hand. Due to the natural shock-absorbing 
+                properties of wheat fibre, Rootcase also offers great protection from 
+                drops and scratches.
+              </p>
+              <p class="lead">
+                Coral sand is a naturally occurring type of sand that originates from the great 
+                coral reefs of the world. It’s iconic smooth texture and rich colour are common 
+                sights at tropical beaches across the globe. Grains of coral sand are produced naturally 
+                when small pieces of coral are broken off by marine creatures big and small, and carried by the 
+                currents around the planet. However, this incredible natural phenomenon is at risk at being lost 
+                forever. Due to increased plastic pollution in the oceans, coral reefs have started to die off around the 
+                world. Because of warmer water temperatures, some coral reefs have also begun to bleach, turning pale and 
+                losing their rich colours. If this continues, it’s very possible that a future without the simple beauty of 
+                coral sand will become a reality. 
+              </p>
+      </div>
     </div>
 
     <% include templates/footer.ejs %>
@@ -67,9 +109,17 @@
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.1.0.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"
+      integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"
+      integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
+      crossorigin="anonymous"
+    ></script>
 
     <script src="/js/index.js"></script>
-</body>
+  </body>
 </html>
