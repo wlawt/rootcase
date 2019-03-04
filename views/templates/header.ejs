@@ -65,6 +65,25 @@
     <title><%= title %></title>
   </head>
   <body>
+    <script>
+      fbq('track', 'ViewContent', {
+        value: 19.99,
+        currency: 'CAD'
+      });
+
+      fbq('track', 'AddToCart', {
+        value: 19.99,
+        currency: 'CAD'
+      });
+
+      fbq('track', 'Purchase', {
+        value: 19.99,
+        currency: 'CAD'
+      });
+
+      fbq('track', 'Contact');
+    </script>
+
     <nav
       class="navbar fixed-top navbar-expand-lg navbar-light navbar-inverse"
       style="background-color: #d4e2f9;"
