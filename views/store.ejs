@@ -31,6 +31,23 @@
     <title><%= title %></title>
   </head>
   <body>
+    <script>
+      fbq('track', 'ViewContent', {
+        value: 19.99,
+        currency: 'CAD',
+      });
+    
+      fbq('track', 'AddToCart', {
+        value: 19.99,
+        currency: 'CAD',
+      });
+  
+      fbq('track', 'Purchase', {
+        value: 19.99,
+        currency: 'CAD',
+      });
+    </script>
+      
     <!--Nav bar-->
     <% include templates/header.ejs %>
 
