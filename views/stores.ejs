@@ -1,0 +1,77 @@
+     
+<!--Nav bar-->
+<% include templates/header.ejs %>
+
+<div class="container" style="padding-top:100px;">
+  <div class="row">
+    <div class="col-md-6 text-center">
+      <h4 class="display-4 mt-3 pt-5">
+        Rootcase for iPhone X/XS - Coral Sand
+      </h1>
+      <p class="lead">
+            A case that doesn't pollute our space. Learn 
+            more below!
+      </p>
+
+      <form action="/charge" method="POST">
+        <script
+          src="https://checkout.stripe.com/checkout.js"
+          class="stripe-button"
+          data-key="<%= stripePublishableKey %>"
+          data-amount="1999"
+          data-name="iPhone X/Xs BioCase"
+          data-description="A biodegradeable phone case"
+          data-image="/img/marketplace.png"
+          data-locale="auto"
+          data-currency="cad"
+          data-shippingAddress="true"
+          data-billingAddress="true"
+          data-zip-code="true"
+        ></script>
+        <script>
+          // Hide default stripe button
+          document.getElementsByClassName(
+            'stripe-button-el'
+          )[0].style.display = 'none';
+        </script>
+        <button type="submit" class="btn btn-outline-primary btn-lg">
+          Purchase For $19.99 CAD
+        </button>
+      </form>
+      <br />
+    </div>
+    <div class="col-md-6">
+      <img src="/img/product.png" alt="" class="img-fluid" />
+    </div>
+  </div>
+  <div class="row">
+        <h5 class="display-4 mt-3 pt-5">Description:</h5>
+        <p class="lead">
+            Available for iPhone X/XS, Rootcase is an eco-friendly alternative
+            to traditional plastic phone cases. 100% BPA-free and biodegradable,
+            by purchasing Rootcase you’re also supporting a plastic-free future
+            for the planet. Order today and get free shipping on all orders.
+        </p>
+          <p class="lead">
+            The soft and easy to grip texture of Rootcase offers a secure and 
+            comfortable feel in your hand. Due to the natural shock-absorbing 
+            properties of wheat fibre, Rootcase also offers great protection from 
+            drops and scratches.
+          </p>
+          <p class="lead">
+            Coral sand is a naturally occurring type of sand that originates from the great 
+            coral reefs of the world. It’s iconic smooth texture and rich colour are common 
+            sights at tropical beaches across the globe. Grains of coral sand are produced naturally 
+            when small pieces of coral are broken off by marine creatures big and small, and carried by the 
+            currents around the planet. However, this incredible natural phenomenon is at risk at being lost 
+            forever. Due to increased plastic pollution in the oceans, coral reefs have started to die off around the 
+            world. Because of warmer water temperatures, some coral reefs have also begun to bleach, turning pale and 
+            losing their rich colours. If this continues, it’s very possible that a future without the simple beauty of 
+            coral sand will become a reality. 
+          </p>
+  </div>
+</div>
+
+<% include templates/footer.ejs %>
+
+

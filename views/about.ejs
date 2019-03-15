@@ -1,143 +1,255 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1, shrink-to-fit=no"
-    />
+<!--Nav bar-->
+<% include templates/header.ejs %>
 
-    <!-- Bootstrap CSS -->
-    <link
-      rel="stylesheet"
-      href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
-      integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS"
-      crossorigin="anonymous"
-    />
-    <link rel="stylesheet" href="/css/style.css" />
-    <link rel="stylesheet" href="/css/features.css" />
-    <link rel="shortcut icon" href="/img/icon.png" type="image/png" />
-
-    <!-- Add icon library -->
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
-    />
-
-    <title><%= title %></title>
-  </head>
-  <body>
-    <!--Nav bar-->
-    <% include templates/header.ejs %>
-
-    <div class="container fade">
-      <div class="row">
-        <div class="col-md-6 text-left">
-          <h5 class="display-3 mt-3 pt-5">
-            Who said being eco friendly was expensive?
-          </h5>
-          <p class="lead">Learn more about Rootcase below!</p>
-          <a href="/store">
-            <button
-              type="submit"
-              class="btn btn-outline-primary btn-lg mb-3 pb-3"
-            >
-              Buy Now!
-            </button>
-          </a>
-        </div>
-        <br />
-        <div class="col-md-6">
-          <img src="/img/product.png" alt="" class="img-fluid" />
-        </div>
-      </div>
-
-      <hr width="75%" class="mb-3 pb-3" />
-
-      <div class="row hideElement">
-        <div class="col-12 col-md-8 text-left">
-          <h4><span class="font-weight-bold">Q.</span> Who are we?</h4>
-          <p class="lead">
-            <span class="font-weight-bold">A.</span> A high school startup.
-          </p>
-        </div>
-      </div>
-
-      <div class="row pt-3 mt-3 hideElement">
-        <div class="col-12 col-md-8 text-left">
-          <h4><span class="font-weight-bold">Q.</span> What do we want?</h4>
-          <p class="lead">
-            <span class="font-weight-bold">A.</span> To provide an eco friendly
-            alternative to plastic products.
-          </p>
-        </div>
-      </div>
-
-      <div class="row pt-3 mt-3 pb-3 mb-3 hideElement">
-        <div class="col-12 col-md-8 text-left">
-          <h4>
-            More about Rootcase:
-          </h4>
-          <p class="lead">
-            A high school start up might not be the first thought that crosses
-            your mind when you think of companies giving back to the
-            environment. To be frank, we can not guarantee we will be able to
-            have the same influence when compared to corporate giants. What we
-            can offer, however, is our end goal. With less people to provide for
-            and our young imaginations, we are fueled by our burning passion to
-            provide an eco friendly alternative without having to spend the
-            extra paper to achieve it - pun intended. It may not seem like it
-            from an individual’s perspective, but behind our company name is a
-            team who is dedicated to saving the environment. After all, As
-            leaders of the next generation and firm believers in the
-            environment, it is our duty to protect what has been passed down to
-            us.
-          </p>
-        </div>
-      </div>
-
-      <hr width="75%" />
-
-      <div class="text-center hideElement">
-        <h3 class="mt-3 pt-3 mb-2 pb-2">Want to help the environment?</h3>
-        <a href="/store" class="mb-2 pb-2">
-          <button type="submit" class="btn btn-outline-primary btn-md">
-            Buy Now!
-          </button>
-        </a>
+<div class="container fade">
+  <div class="row">
+    <div class="col-md-6 text-left">
+      <div class="uk-card-default uk-animation-slide-left">
+        <h5 class="display-3 mt-3 pt-5">
+          Who said being eco friendly was expensive?
+        </h5>
+        <p class="lead uk-padding-small">Learn more about Rootcase below!</p>
       </div>
     </div>
+    <br />
+    <div class="col-md-6">
+      <div
+        class="uk-card uk-card-default uk-card-body uk-animation-slide-right"
+      >
+        <img src="/img/product.png" alt="" class="img-fluid" />
+      </div>
+    </div>
+  </div>
 
-    <% include templates/footer.ejs %>
+  <hr width="75%" class="mb-3 pb-3" />
 
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.1.0.js"></script>
-    <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"
-      integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut"
-      crossorigin="anonymous"
-    ></script>
-    <script
-      src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"
-      integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
-      crossorigin="anonymous"
-    ></script>
+  <div class="card my-class">
+    <div
+      class="uk-card uk-card-default uk-card-body"
+      uk-scrollspy="cls: uk-animation-scale-up; repeat: true"
+    >
+      <div class="card-body">
+        <h4>
+          <span class="font-weight-bold">Q.</span> WHAT MAKES YOUR COMPANY AND
+          PHONE CASES SPECIAL?
+        </h4>
+        <p class="lead">
+          <span class="font-weight-bold">A.</span> Our company is run by a group
+          of young bright entrepreneurs. We want to bring awareness to the lack
+          of fully biodegradable products, and subsequently work towards a world
+          without plastic waste. We also contribute a portion of our proceeds
+          towards One Tree Planted which plants a tree for every phone case
+          purchased.
+        </p>
+      </div>
+    </div>
+  </div>
 
-    <!-- Load React. -->
-    <!-- Note: when deploying, replace "development.js" with "production.min.js". -->
-    <script
-      src="https://unpkg.com/react@16/umd/react.development.js"
-      crossorigin
-    ></script>
-    <script
-      src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"
-      crossorigin
-    ></script>
+  <div class="card my-class">
+    <div
+      class="uk-card uk-card-default uk-card-body"
+      uk-scrollspy="cls: uk-animation-scale-up; repeat: true"
+    >
+      <div class="card-body">
+        <h4>
+          <span class="font-weight-bold">Q.</span> WHAT MATERIALS ARE YOUR PHONE
+          CASES MADE OF?
+        </h4>
+        <p class="lead">
+          <span class="font-weight-bold">A.</span> Our phone cases are made of
+          50% biodegradable material and 50% TPU plastic.
+        </p>
+      </div>
+    </div>
+  </div>
 
-    <!--JS-->
-    <script src="/js/index.js"></script>
-    <script src="/js/features.js"></script>
-  </body>
-</html>
+  <div class="card my-class">
+    <div
+      class="uk-card uk-card-default uk-card-body"
+      uk-scrollspy="cls: uk-animation-scale-up; repeat: true"
+    >
+      <div class="card-body">
+        <h4>
+          <span class="font-weight-bold">Q.</span> ARE YOUR PHONE CASES FULLY
+          BIODEGRADABLE?
+        </h4>
+        <p class="lead">
+          <span class="font-weight-bold">A.</span> We acknowledge the fact that
+          our phone cases are not fully biodegradable. What matters to us is
+          that we are slowly making steps into the right direction of a plastic
+          waste-free world. Through our phone cases we want to bring awareness
+          that there are no fully biodegradable phone cases available on the
+          market and we want to change that. By purchasing our phone case, you
+          are supporting a greener future!
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <div class="card my-class">
+    <div
+      class="uk-card uk-card-default uk-card-body"
+      uk-scrollspy="cls: uk-animation-scale-up; repeat: true"
+    >
+      <div class="card-body">
+        <h4>
+          <span class="font-weight-bold">Q.</span> HOW LONG DOES IT TAKE FOR THE
+          PHONE CASE TO BIODEGRADE?
+        </h4>
+        <p class="lead"><span class="font-weight-bold">A.</span> 3 months.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="card my-class">
+    <div
+      class="uk-card uk-card-default uk-card-body"
+      uk-scrollspy="cls: uk-animation-scale-up; repeat: true"
+    >
+      <div class="card-body">
+        <h4>
+          <span class="font-weight-bold">Q.</span> CAN I ASK FOR A CERTAIN PART
+          OF A DESIGN TO BE CHANGED?
+        </h4>
+        <p class="lead">
+          <span class="font-weight-bold">A.</span> Our phone cases are not
+          customizable.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <div class="card my-class">
+    <div
+      class="uk-card uk-card-default uk-card-body"
+      uk-scrollspy="cls: uk-animation-scale-up; repeat: true"
+    >
+      <div class="card-body">
+        <h4>
+          <span class="font-weight-bold">Q.</span> WHAT PHONE MODELS DO YOU
+          OFFER?
+        </h4>
+        <p class="lead">
+          <span class="font-weight-bold">A.</span> We offer our phone cases in
+          the iPhoneX and iPhoneXS.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <div class="card my-class">
+    <div
+      class="uk-card uk-card-default uk-card-body"
+      uk-scrollspy="cls: uk-animation-scale-up; repeat: true"
+    >
+      <div class="card-body">
+        <h4><span class="font-weight-bold">Q.</span> WHERE DO YOU SHIP TO?</h4>
+        <p class="lead">
+          <span class="font-weight-bold">A.</span> We ship to anywhere in North
+          America. Unfortunately we do not ship elsewhere at the moment!
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <div class="card my-class">
+    <div
+      class="uk-card uk-card-default uk-card-body"
+      uk-scrollspy="cls: uk-animation-scale-up; repeat: true"
+    >
+      <div class="card-body">
+        <h4><span class="font-weight-bold">Q.</span> ARE YOU IN STORES?</h4>
+        <p class="lead">
+          <span class="font-weight-bold">A.</span> Currently Rootcase is only
+          available online at Rootcase.net.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <div class="card my-class">
+    <div
+      class="uk-card uk-card-default uk-card-body"
+      uk-scrollspy="cls: uk-animation-scale-up; repeat: true"
+    >
+      <div class="card-body">
+        <h4>
+          <span class="font-weight-bold">Q.</span> WHAT NON-PROFIT DO YOU DONATE
+          TO?
+        </h4>
+        <p class="lead">
+          <span class="font-weight-bold">A.</span> Rootcase has partnered with
+          One Tree Planted to help support global reforestation. For every phone
+          case that we sell, One Tree Planted will plant a new tree somewhere
+          around the world.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <div class="card my-class">
+    <div
+      class="uk-card uk-card-default uk-card-body"
+      uk-scrollspy="cls: uk-animation-scale-up; repeat: true"
+    >
+      <div class="card-body">
+        <h4>
+          <span class="font-weight-bold">Q.</span> DO I HAVE TO PAY SHIPPING ON
+          TOP OF THE PRICE OF THE PHONE CASE?
+        </h4>
+        <p class="lead">
+          <span class="font-weight-bold">A.</span> You do not have to pay extra
+          for shipping.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <div class="card my-class">
+    <div
+      class="uk-card uk-card-default uk-card-body"
+      uk-scrollspy="cls: uk-animation-scale-up; repeat: true"
+    >
+      <div class="card-body">
+        <h4>
+          <span class="font-weight-bold">Q.</span> WHERE CAN I FOLLOW YOU ON
+          SOCIAL MEDIAS?
+        </h4>
+        <p class="lead">
+          <span class="font-weight-bold">A.</span> Instagram @root.case
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <hr width="75%" />
+
+  <div class="text-center hideElement">
+    <h3 class="mt-3 pt-3 mb-2 pb-2">Want to help the environment?</h3>
+    <a href="/store" class="mb-2 pb-2">
+      <button type="submit" class="btn btn-outline-primary btn-md">
+        Buy Now!
+      </button>
+    </a>
+  </div>
+</div>
+
+<% include templates/footer.ejs %>
+
+<!-- Optional JavaScript -->
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.1.0.js"></script>
+<script
+  src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"
+  integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut"
+  crossorigin="anonymous"
+></script>
+<script
+  src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"
+  integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
+  crossorigin="anonymous"
+></script>
+
+<!--JS-->
+<script src="/js/index.js"></script>
+<script src="/js/features.js"></script>

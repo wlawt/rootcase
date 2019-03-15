@@ -5,6 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
 
+    <!-- UIkit CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.3/css/uikit.min.css"
+    />
+
     <!--Bootstrap-->
     <link
       href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
@@ -12,6 +18,7 @@
       integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS"
       crossorigin="anonymous"
     />
+
     <link rel="stylesheet" href="/css/style.css" />
     <link rel="stylesheet" href="/css/template.css" />
     <link rel="shortcut icon" href="/img/icon.png" type="image/png" />
@@ -84,50 +91,47 @@
       fbq('track', 'Contact');
     </script>
 
-    <nav
-      class="navbar fixed-top navbar-expand-lg navbar-light navbar-inverse"
-      style="background-color: #d4e2f9;"
-    >
-      <a class="navbar-brand" href="/">
-        <img
-          src="/img/icon.png"
-          width="30"
-          height="30"
-          class="d-inline-block align-top"
-          alt=""
-        />
-        RootCase
-      </a>
-      <button
-        class="navbar-toggler"
-        type="button"
-        data-toggle="collapse"
-        data-target="#navbarNavDropdown"
-        aria-controls="navbarNavDropdown"
-        aria-expanded="false"
-        aria-label="Toggle navigation"
-      >
-        <span class="navbar-toggler-icon"></span>
-      </button>
+    <nav class="navbar navbar-light navbar-expand-md bg-light">
+      <div class="d-flex w-50 order-0">
+        <a class="navbar-brand mr-1" href="#">
+          <img src="/img/storepic.png" width="150" height="100" alt="" />
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarNavDropdown"
+          aria-controls="navbarNavDropdown"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      </div>
       <div
-        class="collapse navbar-collapse justify-content-end"
+        class="navbar-collapse collapse justify-content-center order-2"
         id="navbarNavDropdown"
       >
         <ul class="navbar-nav">
-          <li class="nav-item">
-            <a class="nav-link" href="/">Home</a>
+          <li class="nav-item active">
+            <a class="nav-link text-dark" href="/"
+              >Home <span class="sr-only">Home</span></a
+            >
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="/about">About</a>
+          <li class="nav-item ">
+            <a class="nav-link text-dark" href="/about">About</a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="/store">Store</a>
+          <li class="nav-item ">
+            <a class="nav-link text-dark" href="/store">Store</a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="/contact">Contact</a>
+          <li class="nav-item ">
+            <a class="nav-link text-dark" href="/contact">Contact</a>
           </li>
         </ul>
       </div>
+      <span
+        class="navbar-text small text-truncate mt-1 w-50 text-right order-1 order-md-last"
+      ></span>
     </nav>
   </body>
 </html>

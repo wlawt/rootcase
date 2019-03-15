@@ -1,28 +1,28 @@
 #footer {
-    position: absolute;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    text-align: center;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  text-align: center;
 }
 
 #one-page {
-    position: fixed !important;
+  position: fixed !important;
 }
 
 .container {
-    padding-bottom: 100px !important;
-} 
+  padding-bottom: 100px !important;
+}
 
 .onePager {
-    padding-bottom: 410px !important;
+  padding-bottom: 200px !important;
 }
 
 .one-pager {
-    padding-bottom: 300px !important;
+  padding-bottom: 200px !important;
 }
 
 .no-css {
-    padding-bottom: 10px !important;
+  padding-bottom: 10px !important;
 }
