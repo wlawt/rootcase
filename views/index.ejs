@@ -15,7 +15,10 @@
   <div class="uk-animation-toggle" tabindex="0"></div>
 
   <div class="uk-child-width-1-2@m" uk-grid>
-    <div class="uk-card uk-card-default uk-card-body uk-animation-slide-left">
+    <div
+      class="uk-card uk-card-default uk-card-body"
+      uk-scrollspy="cls: uk-animation-slide-left; repeat: true"
+    >
       <div>
         <div class="uk-card uk-card-default">
           <div class="uk-card-media-top">
@@ -27,8 +30,10 @@
 
     <div>
       <div class="uk-animation-toggle" tabindex="0"></div>
+
       <div
-        class="uk-card uk-card-default uk-card-body uk-animation-slide-right"
+        class="uk-card uk-card-default uk-card-body"
+        uk-scrollspy="cls: uk-animation-slide-right; repeat: true"
       >
         <div class="uk-card uk-card-default">
           <div class="uk-card-body">

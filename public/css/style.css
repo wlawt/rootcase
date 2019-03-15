@@ -69,7 +69,7 @@ body {
 }
 
 .jumbotron {
-  background-image: url('https://cdn-image.travelandleisure.com/sites/default/files/styles/1600x1000/public/1507062474/hotel-everest-namche-nepal-mountain-lodge-MOUNTAIN1017.jpg?itok=g-S4SL9n');
+  background-image: url('/img/sky.jpg');
   background-repeat: no-repeat;
   background-size: cover;
 }
