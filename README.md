@@ -6,6 +6,12 @@
 
 # What's new?
 
+## Mar. 16 Update
+
+###### Navbar indicator updated
+
+###### Placeholder images have been replaced
+
 ## Mar. 15 Update
 
 ###### Media images uploaded
