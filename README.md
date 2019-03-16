@@ -6,6 +6,14 @@
 
 # What's new?
 
+## Mar. 15 Update
+
+###### Media images uploaded
+
+###### Small formatting changes
+
+###### Minor UI changes
+
 ## Mar. 14 Update
 
 ###### Website redesign

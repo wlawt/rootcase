@@ -6,10 +6,11 @@ const path = require('path');
 
 // Get contact page
 router.get('/', function(req, res) {
-    res.render('contact', {
-        title: 'Rootcase - Contact Us',
-        name: 'Rootcase - Contact'
-    });
+  res.render('contact', {
+    title: 'Rootcase - Contact Us',
+    name: 'Rootcase - Contact',
+    active2: 'active'
+  });
 });
 
 module.exports = router;

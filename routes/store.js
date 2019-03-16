@@ -6,11 +6,12 @@ const router = express.Router();
 
 // Get store page
 router.get('/', function(req, res) {
-    res.render('store', {
-        title: 'Rootcase - Store',
-        name: 'Rootcase - Store', 
-        stripePublishableKey: keys.stripePublishableKey
-    });
+  res.render('store', {
+    title: 'Rootcase - Store',
+    name: 'Rootcase - Store',
+    stripePublishableKey: keys.stripePublishableKey,
+    active3: 'active'
+  });
 });
 
 module.exports = router;

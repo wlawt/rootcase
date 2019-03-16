@@ -5,7 +5,8 @@ const router = express.Router();
 router.get('/', function(req, res) {
   res.render('about', {
     title: 'Rootcase - About',
-    name: 'Rootcase - About'
+    name: 'Rootcase - About',
+    active1: 'active'
   });
 });
 
