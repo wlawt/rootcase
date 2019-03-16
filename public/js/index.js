@@ -1,9 +1,9 @@
 // Changing 'active' states for tabs --> for navbar
 // Get the container element
-var btnContainer = document.getElementById('activeNav');
+/* var btnContainer = document.getElementById('navbarNavDropdown');
 
 // Get all buttons with class="btn" inside the container
-var btns = btnContainer.getElementsByClassName('nav-link');
+var btns = btnContainer.getElementsByClassName('nav-item');
 
 // Loop through the buttons and add the active class to the current/clicked button
 for (var i = 0; i < btns.length; i++) {
@@ -12,7 +12,14 @@ for (var i = 0; i < btns.length; i++) {
     current[0].className = current[0].className.replace(' active', '');
     this.className += ' active';
   });
-}
+} */
+$(document).ready(function() {
+  // get current URL path and assign 'active' class
+  var pathname = window.location.pathname;
+  $('.navbar-nav > .nav-item > a[href="' + pathname + '"]')
+    .parent()
+    .addClass('active');
+});
 
 // Nav color change
 $(function() {

@@ -67,6 +67,17 @@
   height: 250px;
 }
 
+#logoIcon {
+  width: 200px;
+  height: 80px;
+}
+
+@media screen and (max-width: 500px) {
+  #logoIcon {
+    height: 50px !important;
+  }
+}
+
 .card {
   border: none;
 }
@@ -82,6 +93,7 @@
 
 #social-media {
   padding-bottom: 20px;
+  padding-left: 650px;
 }
 
 #pic {
@@ -94,10 +106,6 @@
   width: 40px;
   height: 35px;
   margin-right: 5px;
-}
-
-#social-media {
-  padding-left: 650px;
 }
 
 #contact {
@@ -143,4 +151,8 @@
 .nav-link:hover {
   font-weight: bold;
   color: white;
+}
+
+.active {
+  font-weight: bold !important;
 }

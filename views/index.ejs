@@ -1,98 +1,224 @@
-<!--Nav bar-->
-<% include templates/header.ejs %>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
 
-<div class="jumbotron jumbotron-fluid">
-  <div class="container">
-    <h1 class="text-center pt-2 text-white">
-      <strong>Introducing a phone case that doesn't pollute our space.</strong>
-    </h1>
-  </div>
-</div>
+    <!-- UIkit CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.3/css/uikit.min.css"
+    />
 
-<div class="uk-padding-small"></div>
+    <!--Bootstrap-->
+    <link
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS"
+      crossorigin="anonymous"
+    />
 
-<div class="uk-container">
-  <div class="uk-animation-toggle" tabindex="0"></div>
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/css/template.css" />
+    <link rel="shortcut icon" href="/img/icon.png" type="image/png" />
 
-  <div class="uk-child-width-1-2@m" uk-grid>
-    <div
-      class="uk-card uk-card-default uk-card-body"
-      uk-scrollspy="cls: uk-animation-slide-left; repeat: true"
-    >
-      <div>
-        <div class="uk-card uk-card-default">
-          <div class="uk-card-media-top">
-            <img src="/img/case7.jpg" alt="" />
+    <!-- Add icon library -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+
+    <!--reCaptcha Script-->
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+
+    <!-- Facebook Pixel Code -->
+    <script>
+      !(function(f, b, e, v, n, t, s) {
+        if (f.fbq) return;
+        n = f.fbq = function() {
+          n.callMethod
+            ? n.callMethod.apply(n, arguments)
+            : n.queue.push(arguments);
+        };
+        if (!f._fbq) f._fbq = n;
+        n.push = n;
+        n.loaded = !0;
+        n.version = '2.0';
+        n.queue = [];
+        t = b.createElement(e);
+        t.async = !0;
+        t.src = v;
+        s = b.getElementsByTagName(e)[0];
+        s.parentNode.insertBefore(t, s);
+      })(
+        window,
+        document,
+        'script',
+        'https://connect.facebook.net/en_US/fbevents.js'
+      );
+      fbq('init', '497944787400192');
+      fbq('track', 'PageView');
+    </script>
+    <noscript
+      ><img
+        height="1"
+        width="1"
+        style="display:none"
+        src="https://www.facebook.com/tr?id=497944787400192&ev=PageView&noscript=1"
+    /></noscript>
+    <!-- End Facebook Pixel Code -->
+
+    <title><%= title %></title>
+  </head>
+  <body>
+    <!--Nav bar-->
+    <nav class="navbar navbar-light navbar-expand-lg bg-light">
+      <div class="d-flex w-50 order-0">
+        <a class="navbar-brand" href="/">
+          <img
+            id="logoIcon"
+            class="img-fluid"
+            src="/img/storepic.png"
+            alt="Rootcase"
+          />
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarNavDropdown"
+          aria-controls="navbarNavDropdown"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      </div>
+
+      <div
+        class="collapse navbar-collapse justify-content-center order-2"
+        id="navbarNavDropdown"
+      >
+        <ul class="navbar-nav mr-auto activeNav">
+          <li class="nav-item active">
+            <a class="nav-link text-dark" href="/"
+              >Home <span class="sr-only">(current)</span></a
+            >
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-dark" href="/about">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-dark" href="/store">Store</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-dark" href="/contact">Contact</a>
+          </li>
+        </ul>
+      </div>
+
+      <span
+        class="navbar-text small text-truncate mt-1 w-50 text-right order-1 order-md-last"
+      ></span>
+    </nav>
+
+    <div class="jumbotron jumbotron-fluid">
+      <div class="container">
+        <h1 class="text-center pt-2 text-white">
+          <strong
+            >Introducing a phone case that doesn't pollute our space.</strong
+          >
+        </h1>
+      </div>
+    </div>
+
+    <div class="uk-container">
+      <div class="uk-animation-toggle" tabindex="0"></div>
+
+      <div class="uk-child-width-1-2@m" uk-grid>
+        <div
+          class="uk-card uk-card-default uk-card-body"
+          uk-scrollspy="cls: uk-animation-slide-left; repeat: false"
+        >
+          <div>
+            <div class="uk-card uk-card-default">
+              <div class="uk-card-media-top">
+                <img src="/img/temp1.png" alt="" />
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <div class="uk-animation-toggle" tabindex="0"></div>
+
+          <div
+            class="uk-card uk-card-default uk-card-body"
+            uk-scrollspy="cls: uk-animation-slide-right; repeat: true"
+          >
+            <div class="uk-card uk-card-default">
+              <div class="uk-card-body">
+                <h3 class="uk-card-title">
+                  A case that doesn't pollute our space.
+                </h3>
+                <p>
+                  Rootcase is a beautifully designed and eco-friendly
+                  alternative to traditional plastic phone cases. Unlike normal
+                  plastic phone cases, Rootcase is 100% biodegradable, meaning
+                  it will have no negative effect on the environment when it’s
+                  being disposed. By buying Rootcase, you’re doing your part to
+                  secure a plastic-free future for our planet. The soft and easy
+                  to grip texture of Rootcase offers a secure and comfortable
+                  feel in your hand. Due to the natural shock-absorbing
+                  properties of wheat fibre, Rootcase also offers great
+                  protection from drops and scratches. Order today and get free
+                  shipping on all orders.
+                </p>
+              </div>
+            </div>
           </div>
         </div>
       </div>
     </div>
 
     <div>
-      <div class="uk-animation-toggle" tabindex="0"></div>
+      <div uk-slideshow="animation: push">
+        <div
+          class="uk-position-relative uk-visible-toggle uk-light"
+          tabindex="-1"
+        >
+          <ul class="uk-slideshow-items">
+            <li>
+              <img src="/img/tradeshow.jpg" alt="" uk-cover />
+            </li>
+            <li>
+              <img src="/img/tradeshow3.jpg" alt="" uk-cover />
+            </li>
+            <li>
+              <img src="/img/tradeshow2.jpg" alt="" uk-cover />
+            </li>
+          </ul>
 
-      <div
-        class="uk-card uk-card-default uk-card-body"
-        uk-scrollspy="cls: uk-animation-slide-right; repeat: true"
-      >
-        <div class="uk-card uk-card-default">
-          <div class="uk-card-body">
-            <h3 class="uk-card-title">
-              A case that doesn't pollute our space.
-            </h3>
-            <p>
-              Rootcase is a beautifully designed and eco-friendly alternative to
-              traditional plastic phone cases. Unlike normal plastic phone
-              cases, Rootcase is 100% biodegradable, meaning it will have no
-              negative effect on the environment when it’s being disposed. By
-              buying Rootcase, you’re doing your part to secure a plastic-free
-              future for our planet. The soft and easy to grip texture of
-              Rootcase offers a secure and comfortable feel in your hand. Due to
-              the natural shock-absorbing properties of wheat fibre, Rootcase
-              also offers great protection from drops and scratches. Order today
-              and get free shipping on all orders.
-            </p>
-          </div>
+          <a
+            class="uk-position-center-left uk-position-small uk-hidden-hover"
+            href="#"
+            uk-slidenav-previous
+            uk-slideshow-item="previous"
+          ></a>
+          <a
+            class="uk-position-center-right uk-position-small uk-hidden-hover"
+            href="#"
+            uk-slidenav-next
+            uk-slideshow-item="next"
+          ></a>
         </div>
+
+        <ul class="uk-slideshow-nav uk-dotnav uk-flex-center uk-margin"></ul>
       </div>
     </div>
-  </div>
-</div>
 
-<div>
-  <div uk-slideshow="animation: push">
-    <div class="uk-position-relative uk-visible-toggle uk-light" tabindex="-1">
-      <ul class="uk-slideshow-items">
-        <li>
-          <img src="/img/tradeshow.jpg" alt="" uk-cover />
-        </li>
-        <li>
-          <img src="/img/tradeshow3.jpg" alt="" uk-cover />
-        </li>
-        <li>
-          <img src="/img/tradeshow2.jpg" alt="" uk-cover />
-        </li>
-      </ul>
-
-      <a
-        class="uk-position-center-left uk-position-small uk-hidden-hover"
-        href="#"
-        uk-slidenav-previous
-        uk-slideshow-item="previous"
-      ></a>
-      <a
-        class="uk-position-center-right uk-position-small uk-hidden-hover"
-        href="#"
-        uk-slidenav-next
-        uk-slideshow-item="next"
-      ></a>
-    </div>
-
-    <ul class="uk-slideshow-nav uk-dotnav uk-flex-center uk-margin"></ul>
-  </div>
-</div>
-
-<!--Contact
+    <!--Contact
         <hr width="75%">
         <div id="contact" class="text-center hideElement">
             <div class="d-flex justify-content-between">
@@ -113,4 +239,6 @@
         </div>
     -->
 
-<% include templates/footer.ejs %>
+    <% include templates/footer.ejs %>
+  </body>
+</html>

@@ -5,7 +5,25 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
-  <link rel="shortcut icon" href="/img/icon.png" type="image/png" />
+      <!-- UIkit CSS -->
+      <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.3/css/uikit.min.css"
+    />
+
+    <!--Bootstrap-->
+    <link
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS"
+      crossorigin="anonymous"
+    />
+
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/css/template.css" />
+    <link rel="shortcut icon" href="/img/icon.png" type="image/png" />
+
+
 
   <script>
       !(function(f, b, e, v, n, t, s) {
@@ -62,9 +80,52 @@
       </script>
 
 <!--Nav bar-->
-<% include templates/header.ejs %>
+<nav class="navbar navbar-light navbar-expand-lg bg-light">
+    <div class="d-flex w-50 order-0">
+      <a class="navbar-brand mr-1" href="/">
+        <img src="/img/storepic.png" width="150" height="100" alt="" />
+      </a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarNavDropdown"
+        aria-controls="navbarNavDropdown"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+    </div>
 
-<div class="uk-container">
+    <div
+      class="collapse navbar-collapse justify-content-center order-2"
+      id="navbarNavDropdown"
+    >
+      <ul class="navbar-nav mr-auto activeNav">
+        <li class="nav-item">
+          <a class="nav-link text-dark" href="/"
+            >Home <span class="sr-only">(current)</span></a
+          >
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-dark" href="/about">About</a>
+        </li>
+        <li class="nav-item active">
+          <a class="nav-link text-dark" href="/store">Store</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-dark" href="/contact">Contact</a>
+        </li>
+      </ul>
+    </div>
+
+    <span
+      class="navbar-text small text-truncate mt-1 w-50 text-right order-1 order-md-last"
+    ></span>
+  </nav>
+
+<div class="uk-container uk-padding-small">
   <div class="uk-child-width-1-2@m" uk-grid>
     <div class="uk-card uk-card-default uk-card-body uk-animation-slide-left">
       <div>
@@ -131,8 +192,8 @@
     <div uk-slideshow="animation: push">
       <div class="uk-position-relative uk-visible-toggle uk-light" tabindex="-1">
         <ul class="uk-slideshow-items">
-          <li>
-            <img src="/img/case3.jpg" alt="" uk-cover />
+          <li> 
+              <img src="/img/case3.jpg" alt="" uk-cover />
           </li>
           <li>
             <img src="/img/case1.jpg" alt="" uk-cover />
