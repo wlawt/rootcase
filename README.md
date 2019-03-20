@@ -6,6 +6,10 @@
 
 # What's new?
 
+## Mar. 19 Update
+
+###### Navbar icon resized
+
 ## Mar. 16 Update
 
 ###### Navbar indicator updated
