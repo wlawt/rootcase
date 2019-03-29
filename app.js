@@ -73,7 +73,7 @@ app.post('/charge', (req, res) => {
     .then(customer =>
       stripe.charges.create({
         amount,
-        description: 'iPhone 7/8 BioCase',
+        description: 'iPhone 10/10x BioCase',
         currency: 'cad',
         customer: customer.id
       })
