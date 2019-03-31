@@ -6,6 +6,10 @@
 
 # What's new?
 
+## Mar. 30 Update
+
+###### Success page content update
+
 ## Mar. 28 Update
 
 ###### Backend product description update
