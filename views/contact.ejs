@@ -41,7 +41,7 @@
         if (!f._fbq) f._fbq = n;
         n.push = n;
         n.loaded = !0;
-        n.version = '2.0';
+        n.version = "2.0";
         n.queue = [];
         t = b.createElement(e);
         t.async = !0;
@@ -51,11 +51,11 @@
       })(
         window,
         document,
-        'script',
-        'https://connect.facebook.net/en_US/fbevents.js'
+        "script",
+        "https://connect.facebook.net/en_US/fbevents.js"
       );
-      fbq('init', '497944787400192');
-      fbq('track', 'PageView');
+      fbq("init", "497944787400192");
+      fbq("track", "PageView");
     </script>
     <noscript
       ><img
@@ -72,7 +72,7 @@
     <!--Nav bar-->
     <% include templates/header.ejs %>
     <script>
-      fbq('track', 'Contact');
+      fbq("track", "Contact");
     </script>
 
     <!--Landing page-->
@@ -149,10 +149,7 @@
         </div>
 
         <form id="contact-form" action="?" method="POST">
-          <div
-            class="g-recaptcha"
-            data-sitekey="6LdL2ZEUAAAAAFBg_ZAio2_towHIJ83rBLRxQbNp"
-          ></div>
+          <div class="g-recaptcha" data-sitekey="<%= captchaClient %>"></div>
           <br />
           <input type="submit" class="btn btn-primary" value="Submit" />
         </form>
@@ -185,10 +182,10 @@
     <!--JS-->
     <script>
       $(document).ready(function() {
-        $('#contact-form').submit(function() {
+        $("#contact-form").submit(function() {
           $(this).ajaxSubmit({
             error: function(xhr) {
-              status('Error: ' + xhr.status);
+              status("Error: " + xhr.status);
             },
             success: function(response) {
               console.log(response);
