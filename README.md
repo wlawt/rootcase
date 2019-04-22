@@ -6,6 +6,12 @@
 
 # What's new?
 
+## Apr. 21 Update
+
+###### Data security update
+
+###### Disabled purchasing button
+
 ## Mar. 30 Update
 
 ###### Success page content update
