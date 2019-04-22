@@ -1,3 +1,6 @@
 node_modules
 keys_dev.js
 /vendor/
+.vscode
+helpers
+config/passport
