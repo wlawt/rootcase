@@ -12,10 +12,10 @@
     "body-parser": "^1.18.3",
     "ejs": "^2.6.1",
     "express": "^4.16.4",
-    "express-session": "^1.15.6",
+    "express-session": "^1.16.1",
     "nodemailer": "^5.1.1",
     "passport": "^0.4.0",
     "request": "^2.88.0",
-    "stripe": "^6.25.1"
+    "stripe": "^6.29.0"
   }
 }
