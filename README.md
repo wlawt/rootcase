@@ -30,8 +30,14 @@ npm start
 #### Product page to purchase the phone case
 ![Product Page](https://github.com/wlawt/rootcase/blob/master/public/img/readme_img/product.png)
 
+#### Q&A page for common questions asked
+![QNA Page](https://github.com/wlawt/rootcase/blob/master/public/img/readme_img/qna.png)
+
+#### Contact page for any other questions
+![Contact](https://github.com/wlawt/rootcase/blob/master/public/img/readme_img/contact.png)
+
 #### Demo/walkthrough of the website
-![Walkthrough](https://www.loom.com/share/b81b970bc0b749c0bd7e16cca11d9ddf)
+[Walkthrough](https://www.loom.com/share/b81b970bc0b749c0bd7e16cca11d9ddf)
 
 ## What's new?
 #### Apr. 21 Update
