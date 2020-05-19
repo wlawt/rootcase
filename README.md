@@ -38,7 +38,7 @@ npm start
 ![Contact](https://github.com/wlawt/rootcase/blob/master/public/img/readme_img/contact.png)
 
 #### Demo/walkthrough of the website
-- [Loom Walkthrough](https://www.loom.com/share/b81b970bc0b749c0bd7e16cca11d9ddf)
+- <a href="https://www.loom.com/share/b81b970bc0b749c0bd7e16cca11d9ddf" target="_blank">Loom Walkthrough</a>
 
 ## What's new?
 #### Apr. 21 Update
