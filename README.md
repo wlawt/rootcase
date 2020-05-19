@@ -1,6 +1,7 @@
 ## RootCase - Biodegradeable Phone Case
 
 Rootcase is a Junior Achievement (JA) Canada Company Program
+<br/>
 Our startup product was acknowledged for these awards:
 - Best Marketing of the Year
 - Leadership in HR of the Year
@@ -37,7 +38,7 @@ npm start
 ![Contact](https://github.com/wlawt/rootcase/blob/master/public/img/readme_img/contact.png)
 
 #### Demo/walkthrough of the website
-[Walkthrough](https://www.loom.com/share/b81b970bc0b749c0bd7e16cca11d9ddf)
+- [Loom Walkthrough](https://www.loom.com/share/b81b970bc0b749c0bd7e16cca11d9ddf)
 
 ## What's new?
 #### Apr. 21 Update
