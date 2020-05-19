@@ -1,65 +1,89 @@
-# RootCase
+## RootCase - Biodegradeable Phone Case
 
-## Rootcase is a Junior Achievement (JA) Canada Company Program
+Rootcase is a Junior Achievement (JA) Canada Company Program
+Our startup product was acknowledged for these awards:
+- Best Marketing of the Year
+- Leadership in HR of the Year
+- Best Brand of the Year Finalist
+- Leadership in Technology Finalist
 
-###### The URL to this git repo can be found here: rootcase.net
+## Running the repo
 
-# What's new?
+### Downloading the source code
 
-## Apr. 21 Update
+#### Clone the repository
+```
+git clone https://github.com/wlawt/rootcase.git
+cd rootcase
+```
 
-###### Data security update
+#### To run it locally:
+```
+npm install
+npm start
+```
 
-###### Disabled purchasing button
+## What it does:
+#### Landing page for customers
+![Landing Page](https://github.com/wlawt/rootcase/blob/master/public/img/readme_img/landing.png)
 
-## Mar. 30 Update
+#### Product page to purchase the phone case
+![Product Page](https://github.com/wlawt/rootcase/blob/master/public/img/readme_img/product.png)
 
-###### Success page content update
+#### Demo/walkthrough of the website
+![Walkthrough](https://www.loom.com/share/b81b970bc0b749c0bd7e16cca11d9ddf)
 
-## Mar. 28 Update
+## What's new?
+#### Apr. 21 Update
+- Data security update
+- Disabled purchasing button
 
-###### Backend product description update
+#### Mar. 30 Update
+- Success page content update
 
-## Mar. 19 Update
+#### Mar. 28 Update
+- Backend product description update
 
-###### Navbar icon resized
+#### Mar. 19 Update
 
-## Mar. 16 Update
+- Navbar icon resized
 
-###### Navbar indicator updated
+#### Mar. 16 Update
 
-###### Placeholder images have been replaced
+- Navbar indicator updated
 
-## Mar. 15 Update
+- Placeholder images have been replaced
 
-###### Media images uploaded
+#### Mar. 15 Update
 
-###### Small formatting changes
+- Media images uploaded
 
-###### Minor UI changes
+- Small formatting changes
 
-## Mar. 14 Update
+- Minor UI changes
 
-###### Website redesign
+#### Mar. 14 Update
 
-###### New content added
+- Website redesign
 
-###### Minor optimization changes
+- New content added
 
-## Feb. 26 Update
+- Minor optimization changes
 
-###### Minor bug fixes
+#### Feb. 26 Update
 
-###### Routing protection
+- Minor bug fixes
 
-###### Fixed cloudflare and heroku deployment issue
+- Routing protection
 
-## Feb. 18 Update
+- Fixed cloudflare and heroku deployment issue
 
-###### Cloudflare security has been added
+#### Feb. 18 Update
 
-###### Contact page and store page is complete
+- Cloudflare security has been added
 
-###### Minor bug fixes
+- Contact page and store page is complete
 
-###### Working on adding 404 error pages
+- Minor bug fixes
+
+- Working on adding 404 error pages
