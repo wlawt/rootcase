@@ -39,6 +39,7 @@ npm start
 
 #### Demo/walkthrough of the website
 - <a href="https://www.loom.com/share/b81b970bc0b749c0bd7e16cca11d9ddf" target="_blank">Loom Walkthrough</a>
+https://www.loom.com/share/b81b970bc0b749c0bd7e16cca11d9ddf
 
 ## What's new?
 #### Apr. 21 Update
