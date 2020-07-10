@@ -24,6 +24,9 @@ npm install
 npm start
 ```
 
+## Demo
+https://www.loom.com/share/b81b970bc0b749c0bd7e16cca11d9ddf
+
 ## What it does:
 #### Landing page for customers
 ![Landing Page](https://github.com/wlawt/rootcase/blob/master/public/img/readme_img/landing.png)
@@ -36,9 +39,6 @@ npm start
 
 #### Contact page for any other questions
 ![Contact](https://github.com/wlawt/rootcase/blob/master/public/img/readme_img/contact.png)
-
-#### Demo/walkthrough of the website
-https://www.loom.com/share/b81b970bc0b749c0bd7e16cca11d9ddf
 
 ## What's new?
 #### Apr. 21 Update
